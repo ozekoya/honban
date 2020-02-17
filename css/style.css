@@ -1,0 +1,7609 @@
+@charset "UTF-8";
+/*====================
+=== 全体
+====================*/
+/*====================
+=== 色
+====================*/
+/*====================
+=== 切り替え
+====================*/
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  .pc {
+    display: none !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+}
+.pcStyle {
+  display: block;
+}
+
+.spStyle {
+  display: none;
+}
+
+@media all and (max-width: 880px) {
+  .pcStyle {
+    display: none !important;
+  }
+
+  .spStyle {
+    display: block !important;
+  }
+}
+/*====================
+=== フォント
+====================*/
+@font-face {
+  font-family: "NotoSansCJKjp Regular";
+  src: url("../font/NotoSansCJKjp-Regular.woff"), url("../font/NotoSansCJKjp-Regular.woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansCJKjp Bold";
+  src: url("../font/NotoSansCJKjp-Bold.woff"), url("../font/NotoSansCJKjp-Bold.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "NotoSansCJKjp Medium";
+  src: url("../font/NotoSansCJKjp-Medium.woff"), url("../font/NotoSansCJKjp-Medium.woff2");
+  font-display: swap;
+}
+/* 50px @ 768px increasing to 58px @ 1920px */
+@media (min-width: 768px) {
+  #top .kv_text h2 {
+    font-size: calc(3.125rem + ((1vw - 7.68px) * 0.6944));
+    /* Where: * 0.6944 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+
+  #top .service .w1200 .service_box .box_text h3 {
+    font-size: calc(1.4375rem + ((1vw - 7.68px) * 1.4757));
+    /* Where: * 1.4757 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+
+  #top .service .w1200 .service_box .box_text h3 span {
+    font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8681));
+    /* Where: * 0.8681 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+
+  #housing .sec6 ul li figure figcaption {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.3472));
+    /* Where: * 0.3472 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+
+  #housing .sec6 ul li figure figcaption .fz16 {
+    font-size: calc(0.75rem + ((1vw - 7.68px) * 0.3472));
+    /* Where: * 0.3472 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+
+  #housing .sec5 #table table th, #housing .sec5 #table table td {
+    font-size: calc(0.75rem + ((1vw - 7.68px) * 0.5208));
+    /* Where: * 0.5208 = 100 * font_Size_Difference / viewport_Width_Difference */
+  }
+}
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1920px) {
+  #top .kv_text h2 {
+    font-size: 58px;
+  }
+
+  #top .service .w1200 .service_box .box_text h3 {
+    font-size: 40px;
+  }
+
+  #top .service .w1200 .service_box .box_text h3 span {
+    font-size: 24px;
+  }
+
+  #housing .sec6 ul li figure figcaption {
+    font-size: 20px;
+  }
+
+  #housing .sec6 ul li figure figcaption .fz16 {
+    font-size: 16px;
+  }
+
+  #housing .sec5 #table table th, #housing .sec5 #table table td {
+    font-size: 18px;
+  }
+}
+/*=== common ==*/
+header {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  max-width: 1040px;
+  background-color: #fff;
+}
+header .logo_sompo {
+  width: 256px;
+}
+header .logo_sompo a {
+  display: block;
+  width: 100%;
+}
+header .logo_sompo a img {
+  display: block;
+  width: 100%;
+}
+header nav ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul li {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-left: 1px solid #b4b4b4;
+}
+header nav ul li a {
+  padding: 0 20px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  line-height: 1.2;
+}
+header nav ul li:last-child {
+  border-right: 1px solid #b4b4b4;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 40px 50px;
+}
+footer img {
+  display: block;
+  width: 256px;
+  margin: 0 auto 25px;
+}
+footer p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+footer p a {
+  text-decoration: underline;
+  color: #000;
+}
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 880px) {
+  .drawer--top.drawer-open .drawer-nav {
+    padding-top: 73px !important;
+  }
+
+  .drawer--top .drawer-hamburger {
+    right: 15px !important;
+  }
+
+  .drawer-hamburger {
+    position: absolute !important;
+    top: 17px !important;
+    padding: 0 !important;
+    width: 30px !important;
+  }
+
+  header {
+    padding: 0;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  header .logo_sompo {
+    width: 207px;
+  }
+  header div {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    background-color: #fff;
+    padding: 13px 15px;
+  }
+  header div a {
+    display: block;
+    width: 179px;
+  }
+  header div a img {
+    display: block;
+    width: 100%;
+  }
+  header nav ul {
+    flex-wrap: wrap;
+    padding: 10px 15px 10px !important;
+    border-top: 1px solid #000;
+  }
+  header nav ul li {
+    width: 100%;
+    border-left: none;
+    height: 60px;
+  }
+  header nav ul li a {
+    width: 100%;
+    text-align: left;
+    min-height: inherit;
+    padding: 20px 30px !important;
+    justify-content: left;
+    font-size: 14px !important;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    position: relative;
+    height: 100%;
+  }
+  header nav ul li a.nav_item {
+    border-top: 1px solid #828282;
+  }
+  header nav ul li a.nav_item::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  header nav ul li a::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 30px;
+  }
+  header nav ul li:last-child {
+    border-right: none;
+    /*a{
+	  border-bottom: 1px solid #828282;
+    }*/
+  }
+  header .light a::before {
+    background-color: #3291a5;
+  }
+  header .red a::before {
+    background-color: #af4b6e;
+  }
+  header .green a::before {
+    background-color: #469687;
+  }
+  header .blue a::before {
+    background-color: #3c5582;
+  }
+  header .drawer-nav {
+    top: 50px;
+  }
+  header .menu {
+    font-size: 11px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    text-align: center;
+  }
+}
+@media all and (max-width: 768px) {
+  /*header{
+	padding: 8px 15px;
+	display: block;
+	div{
+	  width: 179px;
+	  a{
+	    display: block;
+		width: 100%;
+		img{
+		  display: block;
+		  width: 100%;
+		}
+	  }
+	}
+  }*/
+  footer {
+    padding: 30px 27px;
+  }
+  footer img {
+    width: 205px;
+  }
+  footer p {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  footer p.ls {
+    letter-spacing: -0.1px;
+  }
+}
+@media all and (max-width: 350px) {
+  footer p {
+    font-size: 10px;
+  }
+}
+/*========== トップ ==========*/
+#top .kv {
+  position: relative;
+  height: 500px;
+  background-image: url("../img/top/kv.png");
+  background-size: cover;
+  background-position: center center;
+}
+#top .kv_text {
+  margin-top: -30px;
+  padding: 0 20px;
+}
+#top .kv_text h2 {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+#top .kv_text h2 span {
+  font-size: 60px;
+}
+#top .kv_text h2 img {
+  display: block;
+  margin: 0 auto;
+  max-width: 733px;
+  width: 100%;
+}
+#top .kv_text p {
+  text-align: center;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+#top .kv_text p:last-child {
+  margin-bottom: 60px;
+}
+#top .service {
+  padding: 60px 85px;
+  background-color: #f0f0f0;
+}
+#top .service .w1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#top .service .w1200 h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+#top .service .w1200 .service_box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#top .service .w1200 .service_box div {
+  width: 50%;
+}
+#top .service .w1200 .service_box .box_img {
+  min-height: 400px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#top .service .w1200 .service_box .box_text {
+  position: relative;
+}
+#top .service .w1200 .service_box .box_text h3 {
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#top .service .w1200 .service_box .box_text p {
+  text-align: center;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+#top .service .w1200 .service_box .box_text a {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  padding: 20.5px 0px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.5s;
+  max-width: 400px;
+}
+#top .service .w1200 .service_box .box_text a:hover {
+  background-color: #fff;
+}
+#top .service .w1200 .service01 .box_img {
+  background-image: url("../img/top/service01.png");
+}
+#top .service .w1200 .service01 .box_text {
+  background-color: #3291a5;
+  padding: 70px 6%;
+  /*a{
+    color: $light;
+  }*/
+}
+#top .service .w1200 .service01 .box_text .thin {
+  font-size: 20px;
+  background-color: #c3dee5;
+  padding: 10px 22px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 130px;
+  text-align: center;
+  color: #3291a5;
+  line-height: 1;
+  margin: 25px auto 50px;
+}
+#top .service .w1200 .service01 .box_text a:hover {
+  color: #3291a5;
+}
+#top .service .w1200 .service02 .box_img {
+  background-image: url("../img/top/service02.png");
+}
+#top .service .w1200 .service02 .box_text {
+  background-color: #af4b6e;
+  padding: 30px 6%;
+  /* a{
+     color: $red;
+   }*/
+}
+#top .service .w1200 .service02 .box_text .thin {
+  font-size: 22px;
+  background-color: #eacdd8;
+  padding: 10px 8px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 210px;
+  text-align: center;
+  color: #af4b6e;
+  line-height: 1;
+  margin: 25px auto 50px;
+  line-height: 1.1;
+}
+#top .service .w1200 .service02 .box_text .thin span {
+  font-size: 18px;
+}
+#top .service .w1200 .service02 .box_text a:hover {
+  color: #af4b6e;
+}
+#top .service .w1200 .service03 .box_img {
+  background-image: url("../img/top/service03.png");
+}
+#top .service .w1200 .service03 .box_text {
+  background-color: #469687;
+  padding: 60px 6%;
+  /*a{
+    color: $green;
+  }*/
+}
+#top .service .w1200 .service03 .box_text .thin {
+  font-size: 20px;
+  background-color: #c8dfdb;
+  padding: 10px 22px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 130px;
+  text-align: center;
+  color: #469687;
+  line-height: 1;
+  margin: 25px auto 50px;
+}
+#top .service .w1200 .service03 .box_text a:hover {
+  color: #469687;
+}
+#top .service .w1200 .service04 .box_img {
+  background-image: url("../img/top/service04.png");
+}
+#top .service .w1200 .service04 .box_text {
+  background-color: #3c5582;
+  padding: 45px 5%;
+  /*a{
+    color: $blue;
+  }*/
+}
+#top .service .w1200 .service04 .box_text .thin {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  margin: 25px auto 50px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#top .service .w1200 .service04 .box_text .thin .thin_thin {
+  background-color: #c4ccda;
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 10px;
+  margin: 0 10px;
+}
+#top .service .w1200 .service04 .box_text .thin .thin_thin:first-child {
+  padding: 22.5px 10px;
+}
+#top .service .w1200 .service04 .box_text .thin .thin_thin:last-child {
+  padding: 10px;
+}
+#top .service .w1200 .service04 .box_text .thin .thin_thin:last-child span {
+  font-size: 18px;
+}
+#top .service .w1200 .service04 .box_text a:hover {
+  color: #3c5582;
+}
+#top .regulations {
+  max-width: 810px;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+#top .regulations h3 {
+  color: #e12828;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#top .regulations .old {
+  margin-bottom: 40px;
+}
+#top .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#top .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#top .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  transition: 0.5s;
+  border: 2px solid #000;
+  border-radius: 50px;
+}
+#top .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#top .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#top .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#top .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#top .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#top .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED トップ ==========*/
+/*========== 家電延長保証 ==========*/
+#standard .kv {
+  position: relative;
+  background-image: url("../img/standard/kv.png");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#standard .kv .kv_img {
+  display: block;
+  width: 100%;
+}
+#standard .kv .kv_text {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+}
+#standard .kv .kv_text .light_area {
+  background-color: #3291a5;
+  padding: 50px 20px 40px;
+}
+#standard .kv .kv_text .light_area img {
+  /*width: 76px;*/
+  display: block;
+  margin: 0 auto 30px;
+}
+#standard .kv .kv_text .light_area p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
+}
+#standard .kv .kv_text .light_area p span {
+  font-size: 30px;
+}
+#standard .kv .kv_text .op_area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+}
+#standard .kv .kv_text .op_area p:first-child {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#standard .kv .kv_text .op_area p:last-child {
+  background-color: #3291a5;
+  color: #fff;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding: 9px 0;
+  text-align: center;
+  display: block;
+  margin: 20px auto 0;
+  line-height: 1.12;
+  width: 210px;
+}
+#standard .kv .kv_text .op_area p:last-child span {
+  font-size: 18px;
+}
+#standard .gray_bg {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+#standard .gray_bg:last-child {
+  margin-bottom: 60px;
+}
+#standard .gray_bg .w1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#standard .gray_bg .w1000 h2 {
+  font-size: 38px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 60px;
+  padding-bottom: 45px;
+  font-weight: normal !important;
+}
+#standard .gray_bg .w1000 h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background-image: url("../img/common/griy_h2_img.png");
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+}
+#standard .sec1 ul {
+  max-width: 675px;
+  margin: 0 auto 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#standard .sec1 ul li {
+  list-style: none;
+  width: 30%;
+}
+#standard .sec1 ul li img {
+  display: block;
+  width: 100%;
+}
+#standard .sec1 .sec1_konnano {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+#standard .sec1 .sec1_konnano span {
+  font-size: 36px;
+  color: #3291a5;
+}
+#standard .sec1 .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+#standard .sec1 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#standard .sec1 .kome .fz20 {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  background: linear-gradient(transparent 70%, #c3dee5 0%);
+  padding-left: 6px;
+}
+#standard .sec1 .kome a {
+  color: #3291a5;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#standard .sec1 .kome a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#standard .sec1 .kome a span {
+  border-bottom: 1px solid #3291a5;
+}
+#standard .sec2 .change {
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#standard .sec2 .change div {
+  width: 48%;
+  margin-bottom: 40px;
+}
+#standard .sec2 .change div img {
+  display: block;
+  width: 100%;
+}
+#standard .sec2 ul li {
+  margin-bottom: 30px;
+  list-style: none;
+}
+#standard .sec2 ul li .light_ttl {
+  font-size: 18px;
+  color: #3291a5;
+  margin-bottom: 2px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec2 ul li .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#standard .sec2 ul li .txt::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+#standard .sec2 ul li .txt_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#standard .sec2 .toha {
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 130px;
+  height: 32px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3291a5;
+  margin-bottom: 5px;
+}
+#standard .sec2 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#standard .sec2 .kome a {
+  color: #3291a5;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#standard .sec2 .kome a span {
+  border-bottom: 1px solid #3291a5;
+}
+#standard .sec2 .kome a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#standard .sec3 .txt_box h3 {
+  font-size: 26px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+  letter-spacing: -0.5px;
+}
+#standard .sec3 .txt_box h3 span {
+  background: linear-gradient(transparent 70%, #c3dee5 0%);
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec3 .txt_box p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+#standard .sec3 .txt_box p:first-child {
+  letter-spacing: -0.4px;
+}
+#standard .sec3 .txt_box p:last-child {
+  letter-spacing: -0.3px;
+}
+#standard .sec3 .txt_box ul {
+  max-width: 860px;
+  padding: 0 10px;
+  margin: 0 auto 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#standard .sec3 .txt_box ul li {
+  width: 31%;
+  list-style: none;
+}
+#standard .sec3 .txt_box ul li img {
+  display: block;
+  width: 100%;
+}
+#standard .sec3 .guraf {
+  max-width: 1000px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#standard .sec3 .guraf img {
+  display: block;
+  width: 100%;
+}
+#standard .sec3 .taiou {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+#standard .sec3 .keisan {
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+#standard .sec4 .g_up {
+  margin-bottom: 60px;
+}
+#standard .sec4 .g_up h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  color: #af4b6e;
+}
+#standard .sec4 .g_up dl {
+  margin-bottom: 20px;
+}
+#standard .sec4 .g_up dl dt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+}
+#standard .sec4 .g_up dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding-left: 16px;
+}
+#standard .sec4 .sizen h3 {
+  background-color: #fff;
+  border: 3px solid #af4b6e;
+  padding: 4px 0;
+}
+#standard .sec4 .ziko h3 {
+  background-color: #af4b6e;
+  color: #fff;
+  padding: 7px 0;
+}
+#standard .sec5 .hosyou_txt li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 2;
+}
+#standard .sec5 .hosyou_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#standard .sec5 .pdf_list {
+  max-width: 620px;
+  padding: 0 10px;
+  margin: 40px auto 65px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#standard .sec5 .pdf_list li {
+  list-style: none;
+  width: 46.7%;
+}
+#standard .sec5 .pdf_list li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 14px 35px 14px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+#standard .sec5 .pdf_list li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 52%;
+  right: 65px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#standard .sec5 .pdf_list li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#standard .sec5 .pdf_list li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#standard .sec5 .pdf_list li:last-child a::after {
+  right: 45px;
+}
+#standard .sec5 .bg_wh {
+  background-color: #fff;
+  padding: 30px;
+}
+#standard .sec5 .bg_wh h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3291a5;
+  margin-bottom: 30px;
+}
+#standard .sec5 .bg_wh p, #standard .sec5 .bg_wh .hosyougai_txt {
+  line-height: 2;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec5 .bg_wh p a {
+  color: #3291a5;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#standard .sec5 .bg_wh p a span {
+  border-bottom: 1px solid #3291a5;
+}
+#standard .sec5 .bg_wh p a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#standard .sec5 .bg_wh .hosyougai_txt li {
+  list-style: none;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#standard .sec5 .bg_wh .hosyougai_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#standard .sec5 .bg_wh .icon_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+#standard .sec5 .bg_wh .icon_list li {
+  list-style: none;
+  width: 15.32%;
+  margin-bottom: 15px;
+}
+#standard .sec5 .bg_wh .icon_list li img {
+  display: block;
+  width: 100%;
+}
+#standard .sec5 .bg_wh .icon_list .mbn {
+  margin-bottom: 0;
+}
+#standard .sec9 .tb {
+  margin-bottom: 60px;
+}
+#standard .sec9 .tb .ttl {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  background-color: #3291a5;
+  padding: 7px;
+}
+#standard .sec9 .tb table {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+#standard .sec9 .tb table tr:first-child {
+  background-color: #c3dee5;
+}
+#standard .sec9 .tb table tr.break td {
+  border-bottom: 3px solid #3291a5;
+}
+#standard .sec9 .tb table tr.break td:first-child {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .tb table tr.break td:not(:first-child) {
+  border-bottom: 2px solid #3291a5;
+}
+#standard .sec9 .tb table tr.break td.bbn {
+  border-bottom: none !important;
+}
+#standard .sec9 .tb table tr.bb td {
+  border-bottom: 3px solid #3291a5;
+}
+#standard .sec9 .tb table tr td, #standard .sec9 .tb table tr th {
+  padding: 13px 10px;
+  border-right: 1px solid #3291a5;
+  font-size: 18px;
+    /*&:first-child{
+	  width: 21%;
+	  text-align: center;
+	}
+	&:nth-of-type(2n){
+	  width: 15% !important;
+	  text-align: center;
+	}
+	&:nth-of-type(n+2){
+	  width: 10%;
+	  text-align: center;
+	}
+	&:last-child{
+	  width: 54% !important;
+	  text-align: left;
+	  border-right: none;
+	}*/
+}
+#standard .sec9 .tb table tr td.w200, #standard .sec9 .tb table tr th.w200 {
+  width: 20%;
+  text-align: center;
+}
+#standard .sec9 .tb table tr td.w160, #standard .sec9 .tb table tr th.w160 {
+  width: 16%;
+  text-align: center;
+}
+#standard .sec9 .tb table tr td.w100, #standard .sec9 .tb table tr th.w100 {
+  width: 10%;
+  text-align: center;
+}
+#standard .sec9 .tb table tr td.w540, #standard .sec9 .tb table tr th.w540 {
+  width: 54%;
+  text-align: left;
+  border-right: none;
+}
+#standard .sec9 .tb table tr th {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .tb table tr th:last-child {
+  text-align: center;
+}
+#standard .sec9 .tb table tr td {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  border-bottom: 2px solid #3291a5;
+}
+#standard .sec9 .tb table tr td .box {
+  background-color: #3291a5;
+  color: #fff;
+  padding: 8px 10px;
+  display: inline-block;
+  margin: 0 10px;
+}
+#standard .sec9 .tb table tr td .box:first-child {
+  margin-left: 0;
+}
+#standard .sec9 .tb table tr td .price {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .tb table tr td:first-child {
+  letter-spacing: -1px;
+}
+#standard .sec9 .tb table tr td .ten {
+  letter-spacing: -6px;
+  margin-left: -6px;
+}
+#standard .sec9 .tb table tr td.fwb {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .tb table tr:last-child td {
+  border-bottom: none;
+}
+#standard .sec9 .tb .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .fwb {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#standard .sec9 .tyuui {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec9 .tyuui span {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+#standard .sec6 .sec6_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#standard .sec6 ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#standard .sec6 ul li {
+  list-style: none;
+  width: 29.4%;
+  position: relative;
+}
+#standard .sec6 ul li figure img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#standard .sec6 ul li figure figcaption {
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.8;
+  font-size: 20px;
+}
+#standard .sec6 ul li figure figcaption .light_txt {
+  color: #3291a5;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec6 ul li figure figcaption .fz16 {
+  font-size: 16px;
+}
+#standard .sec6 ul .yazi::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  right: -15%;
+  width: 8.85%;
+  height: 56px;
+  display: block;
+  background-image: url(../img/standard/yazi.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#standard .sec7 .sec7_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#standard .sec7 .sec7_txt a {
+  color: #3291a5;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#standard .sec7 .sec7_txt a span {
+  border-bottom: 1px solid #3291a5;
+}
+#standard .sec7 .sec7_txt a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#standard .sec7 .contact_link {
+  margin-bottom: 40px;
+}
+#standard .sec7 .contact_link .wh {
+  background-color: #fff;
+  padding: 30px 55px;
+}
+#standard .sec7 .contact_link .ttl {
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3291a5;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#standard .sec7 .contact_link .df {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#standard .sec7 .contact_link .df .con {
+  width: 47.2%;
+}
+#standard .sec7 .contact_link .df .con a {
+  display: block;
+  width: 100%;
+}
+#standard .sec7 .contact_link .df .con a img {
+  display: block;
+  width: 100%;
+}
+#standard .sec7 .contact_link p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec7 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#standard .sec8 .qa li {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+}
+#standard .sec8 .qa li:last-child {
+  margin-bottom: 0;
+}
+#standard .sec8 .qa li .q_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+#standard .sec8 .qa li .q_area .q_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #3291a5;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #fff;
+}
+#standard .sec8 .qa li .q_area .q_txt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .sec8 .qa li .a_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+}
+#standard .sec8 .qa li .a_area .a_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #c3dee5;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #3291a5;
+}
+#standard .sec8 .qa li .a_area .a_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  padding-top: 5px;
+}
+#standard .sec8 .qa li .a_area .a_txt a {
+  text-decoration: none;
+  color: #000;
+}
+#standard .sec8 .qa li .a_area .a_txt a.mail {
+  border-bottom: 1px solid #000;
+}
+#standard .regulations {
+  max-width: 540px;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+#standard .regulations h3 {
+  color: #3291a5;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#standard .regulations .old {
+  margin-bottom: 40px;
+}
+#standard .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#standard .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#standard .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #000;
+}
+#standard .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#standard .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#standard .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#standard .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#standard .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#standard .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED 家電延長保証 ==========*/
+/*========== 物損付家電延長保証 ==========*/
+#accident .kv {
+  position: relative;
+  background-image: url("../img/accident/kv.png");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#accident .kv .kv_img {
+  display: block;
+  width: 100%;
+}
+#accident .kv .kv_text {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+}
+#accident .kv .kv_text .red_area {
+  background-color: #af4b6e;
+  padding: 20px;
+}
+#accident .kv .kv_text .red_area img {
+  width: 223px;
+  display: block;
+  margin: 0 auto 20px;
+}
+#accident .kv .kv_text .red_area p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
+}
+#accident .kv .kv_text .red_area p span {
+  font-size: 30px;
+}
+#accident .kv .kv_text .op_area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+#accident .kv .kv_text .op_area p:first-child {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#accident .kv .kv_text .op_area p:last-child {
+  background-color: #af4b6e;
+  color: #fff;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding: 9px 0;
+  text-align: center;
+  display: block;
+  margin: 17px auto 0;
+  line-height: 1.12;
+  width: 210px;
+}
+#accident .kv .kv_text .op_area p:last-child span {
+  font-size: 18px;
+}
+#accident .gray_bg {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+#accident .gray_bg:last-child {
+  margin-bottom: 60px;
+}
+#accident .gray_bg .w1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#accident .gray_bg .w1000 h2 {
+  font-size: 38px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 60px;
+  padding-bottom: 45px;
+  font-weight: normal !important;
+}
+#accident .gray_bg .w1000 h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background-image: url("../img/common/griy_h2_img.png");
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+}
+#accident .sec1 ul {
+  max-width: 675px;
+  margin: 0 auto 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#accident .sec1 ul li {
+  list-style: none;
+  width: 30%;
+}
+#accident .sec1 ul li img {
+  display: block;
+  width: 100%;
+}
+#accident .sec1 .sec1_konnano {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+#accident .sec1 .sec1_konnano span {
+  font-size: 36px;
+  color: #af4b6e;
+}
+#accident .sec1 .trai h3 {
+  text-align: center;
+  background-color: #af4b6e;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#accident .sec1 .trai h3::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 0 25px;
+  border-color: #af4b6e transparent transparent transparent;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#accident .sec1 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+}
+#accident .sec1 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px;
+  max-width: 707px;
+}
+#accident .sec1 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#accident .sec1 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+}
+#accident .sec1 .trai .wh_gb .kome dl {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+#accident .sec1 .trai .wh_gb .kome dl dt {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 18.7%;
+  padding-left: 15px;
+}
+#accident .sec1 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 81.3%;
+}
+#accident .sec1 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#accident .sec1 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #af4b6e;
+}
+#accident .sec1 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#accident .sec1 .trai .wh_gb .kome dl:first-child {
+  border: 3px solid #af4b6e;
+  margin-bottom: 20px;
+}
+#accident .sec1 .trai .wh_gb .kome dl:first-child dt {
+  color: #af4b6e;
+}
+#accident .sec1 .trai .wh_gb .kome dl:first-child dd a {
+  color: #af4b6e;
+}
+#accident .sec1 .trai .wh_gb .kome dl:last-child {
+  background-color: #af4b6e;
+}
+#accident .sec1 .trai .wh_gb .kome dl:last-child dt, #accident .sec1 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#accident .sec1 .trai .wh_gb .kome dl:last-child dt a, #accident .sec1 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#accident .sec1 .trai .wh_gb .kome dl:last-child dt a span, #accident .sec1 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#accident .sec2 .change {
+  margin: 0 auto 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#accident .sec2 .change div {
+  width: 48%;
+}
+#accident .sec2 .change div img {
+  display: block;
+  width: 100%;
+}
+#accident .sec2 ul li {
+  margin-bottom: 30px;
+  list-style: none;
+}
+#accident .sec2 ul li .red_ttl {
+  font-size: 18px;
+  color: #af4b6e;
+  margin-bottom: 2px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec2 ul li .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#accident .sec2 ul li .txt::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+#accident .sec2 ul li .txt_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#accident .sec3 .dddd {
+  margin-bottom: 40px;
+}
+#accident .sec3 .dddd dl dt {
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 130px;
+  text-align: center;
+}
+#accident .sec3 .dddd dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec3 .dddd dl:first-child {
+  margin-bottom: 20px;
+}
+#accident .sec3 .dddd dl:first-child dt {
+  background-color: #fff;
+  border: 3px solid #af4b6e;
+  color: #af4b6e;
+}
+#accident .sec3 .dddd dl:last-child dt {
+  color: #fff;
+  background-color: #af4b6e;
+  padding: 3px 0;
+}
+#accident .sec3 img {
+  display: block;
+  width: 100%;
+}
+#accident .sec4 .g_up {
+  margin-bottom: 60px;
+}
+#accident .sec4 .g_up h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  color: #af4b6e;
+}
+#accident .sec4 .g_up dl {
+  margin-bottom: 20px;
+}
+#accident .sec4 .g_up dl dt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+}
+#accident .sec4 .g_up dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding-left: 16px;
+}
+#accident .sec4 .sizen h3 {
+  background-color: #fff;
+  border: 3px solid #af4b6e;
+  padding: 4px 0;
+}
+#accident .sec4 .ziko h3 {
+  background-color: #af4b6e;
+  color: #fff;
+  padding: 7px 0;
+}
+#accident .sec4 img {
+  display: block;
+  width: 100%;
+}
+#accident .sec5 .hosyou_txt li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 2;
+}
+#accident .sec5 .hosyou_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#accident .sec5 .pdf_list {
+  max-width: 620px;
+  padding: 0 10px;
+  margin: 40px auto 65px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#accident .sec5 .pdf_list li {
+  list-style: none;
+  width: 46.7%;
+}
+#accident .sec5 .pdf_list li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 14px 35px 14px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+#accident .sec5 .pdf_list li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 52%;
+  right: 65px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#accident .sec5 .pdf_list li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#accident .sec5 .pdf_list li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#accident .sec5 .pdf_list li:last-child a::after {
+  right: 45px;
+}
+#accident .sec5 .trai {
+  border: 4px solid #af4b6e;
+  margin-bottom: 60px;
+}
+#accident .sec5 .trai h3 {
+  text-align: center;
+  background-color: #af4b6e;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#accident .sec5 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+}
+#accident .sec5 .trai .wh_gb .plus {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .plus span {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  width: 30%;
+  min-width: 140px;
+}
+#accident .sec5 .trai .wh_gb .plus span:first-child {
+  border: 3px solid #af4b6e;
+  color: #af4b6e;
+  padding: 4px 0;
+  margin-right: 15px;
+}
+#accident .sec5 .trai .wh_gb .plus span:last-child {
+  background-color: #af4b6e;
+  color: #fff;
+  padding: 7px 0;
+  margin-left: 15px;
+}
+#accident .sec5 .trai .wh_gb .plus_txt {
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#accident .sec5 .trai .wh_gb .wac_plus {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#accident .sec5 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 50px;
+  max-width: 707px;
+}
+#accident .sec5 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#accident .sec5 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .kome dl {
+  padding: 20px;
+}
+#accident .sec5 .trai .wh_gb .kome dl dt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#accident .sec5 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec5 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#accident .sec5 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#accident .sec5 .trai .wh_gb .kome dl:first-child {
+  background-color: #eacdd8;
+  margin-bottom: 20px;
+}
+#accident .sec5 .trai .wh_gb .kome dl:first-child dt {
+  color: #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .kome dl:first-child dd a {
+  color: #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .kome dl:last-child {
+  background-color: #af4b6e;
+}
+#accident .sec5 .trai .wh_gb .kome dl:last-child dt, #accident .sec5 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#accident .sec5 .trai .wh_gb .kome dl:last-child dt a, #accident .sec5 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#accident .sec5 .trai .wh_gb .kome dl:last-child dt a span, #accident .sec5 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#accident .sec5 .bg_wh {
+  background-color: #fff;
+  padding: 30px;
+}
+#accident .sec5 .bg_wh .ttl {
+  font-size: 24px;
+  color: #af4b6e;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#accident .sec5 .bg_wh ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#accident .sec5 .bg_wh ul li {
+  width: 14.4%;
+  list-style: none;
+  margin-bottom: 15px;
+}
+#accident .sec5 .bg_wh ul li img {
+  display: block;
+  width: 100%;
+}
+#accident .sec5 .bg_wh .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec5 .bg_wh ol {
+  list-style: none;
+}
+#accident .sec5 .bg_wh ol li {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  list-style: none;
+}
+#accident .sec5 .bg_wh.mb60 {
+  margin-bottom: 60px;
+}
+#accident .sec9 .tb {
+  margin-bottom: 60px;
+}
+#accident .sec9 .tb .ttl {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  background-color: #af4b6e;
+  padding: 7px;
+}
+#accident .sec9 .tb table {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+#accident .sec9 .tb table tr:first-child {
+  background-color: #eacdd8;
+}
+#accident .sec9 .tb table tr.break td {
+  border-bottom: 3px solid #af4b6e;
+}
+#accident .sec9 .tb table tr.break td:first-child {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .tb table tr.break td:not(:first-child) {
+  border-bottom: 2px solid #af4b6e;
+}
+#accident .sec9 .tb table tr.break td.bbn {
+  border-bottom: none !important;
+}
+#accident .sec9 .tb table tr.bb td {
+  border-bottom: 3px solid #af4b6e;
+}
+#accident .sec9 .tb table tr td, #accident .sec9 .tb table tr th {
+  padding: 13px 10px;
+  border-right: 1px solid #af4b6e;
+  font-size: 18px;
+    /*&:first-child{
+	  width: 21%;
+	  text-align: center;
+	}
+	&:nth-of-type(2n){
+	  width: 15% !important;
+	  text-align: center;
+	}
+	&:nth-of-type(n+2){
+	  width: 10%;
+	  text-align: center;
+	}
+	&:last-child{
+	  width: 54% !important;
+	  text-align: left;
+	  border-right: none;
+	}*/
+}
+#accident .sec9 .tb table tr td.w200, #accident .sec9 .tb table tr th.w200 {
+  width: 20%;
+  text-align: center;
+}
+#accident .sec9 .tb table tr td.w160, #accident .sec9 .tb table tr th.w160 {
+  width: 16%;
+  text-align: center;
+}
+#accident .sec9 .tb table tr td.w100, #accident .sec9 .tb table tr th.w100 {
+  width: 10%;
+  text-align: center;
+}
+#accident .sec9 .tb table tr td.w540, #accident .sec9 .tb table tr th.w540 {
+  width: 54%;
+  text-align: left;
+  border-right: none;
+}
+#accident .sec9 .tb table tr th {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .tb table tr th:last-child {
+  text-align: center;
+}
+#accident .sec9 .tb table tr td {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  border-bottom: 2px solid #af4b6e;
+}
+#accident .sec9 .tb table tr td .box {
+  background-color: #af4b6e;
+  color: #fff;
+  padding: 8px 10px;
+  display: inline-block;
+  margin: 0 10px;
+}
+#accident .sec9 .tb table tr td .box:first-child {
+  margin-left: 0;
+}
+#accident .sec9 .tb table tr td .price {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .tb table tr td:first-child {
+  letter-spacing: -1px;
+}
+#accident .sec9 .tb table tr td .ten {
+  letter-spacing: -6px;
+  margin-left: -6px;
+}
+#accident .sec9 .tb table tr td.fwb {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .tb table tr:last-child td {
+  border-bottom: none;
+}
+#accident .sec9 .tb .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .fwb {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#accident .sec9 .tyuui {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec9 .tyuui span {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+#accident .sec6 .sec6_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#accident .sec6 ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#accident .sec6 ul li {
+  list-style: none;
+  width: 29.4%;
+  position: relative;
+}
+#accident .sec6 ul li figure img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#accident .sec6 ul li figure figcaption {
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.8;
+}
+#accident .sec6 ul li figure figcaption .red_txt {
+  color: #af4b6e;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 20px;
+}
+#accident .sec6 ul li figure figcaption .fz16 {
+  font-size: 16px;
+}
+#accident .sec6 ul .yazi::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  right: -15%;
+  width: 8.85%;
+  height: 56px;
+  display: block;
+  background-image: url("../img/accident/yazi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#accident .sec7 .sec7_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#accident .sec7 .sec7_txt a {
+  color: #af4b6e;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#accident .sec7 .sec7_txt a span {
+  border-bottom: 1px solid #af4b6e;
+}
+#accident .sec7 .sec7_txt a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#accident .sec7 .contact_link {
+  margin-bottom: 40px;
+}
+#accident .sec7 .contact_link .wh {
+  background-color: #fff;
+  padding: 30px 55px;
+}
+#accident .sec7 .contact_link .ttl {
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #af4b6e;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#accident .sec7 .contact_link .df {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#accident .sec7 .contact_link .df .con {
+  width: 47.2%;
+}
+#accident .sec7 .contact_link .df .con a {
+  display: block;
+  width: 100%;
+}
+#accident .sec7 .contact_link .df .con a img {
+  display: block;
+  width: 100%;
+}
+#accident .sec7 .contact_link p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec7 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#accident .sec8 .qa li {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+}
+#accident .sec8 .qa li:last-child {
+  margin-bottom: 0;
+}
+#accident .sec8 .qa li .q_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+#accident .sec8 .qa li .q_area .q_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #af4b6e;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #fff;
+}
+#accident .sec8 .qa li .q_area .q_txt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .sec8 .qa li .a_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+}
+#accident .sec8 .qa li .a_area .a_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #eacdd8;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #af4b6e;
+}
+#accident .sec8 .qa li .a_area .a_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  padding-top: 5px;
+}
+#accident .sec8 .qa li .a_area .a_txt a {
+  text-decoration: none;
+  color: #000;
+}
+#accident .sec8 .qa li .a_area .a_txt a.link {
+  color: #af4b6e;
+  padding-right: 10px;
+  position: relative;
+}
+#accident .sec8 .qa li .a_area .a_txt a.link span {
+  border-bottom: 1px solid #af4b6e;
+}
+#accident .sec8 .qa li .a_area .a_txt a.link img {
+  width: 16px;
+  vertical-align: middle;
+}
+#accident .sec8 .qa li .a_area .a_txt a.mail {
+  border-bottom: 1px solid #000;
+}
+#accident .sec8 .qa li .a_area .a_txt .fwb {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .regulations {
+  max-width: 730px;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+#accident .regulations h3 {
+  color: #af4b6e;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#accident .regulations .old {
+  margin-bottom: 40px;
+}
+#accident .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#accident .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#accident .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #000;
+}
+#accident .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#accident .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#accident .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#accident .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#accident .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#accident .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED 物損付家電延長保証 ==========*/
+/*========== 住宅設備機器延長保証 ==========*/
+#housing .kv {
+  position: relative;
+  background-image: url("../img/housing/kv.png");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#housing .kv .kv_img {
+  display: block;
+  width: 100%;
+}
+#housing .kv .kv_text {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+}
+#housing .kv .kv_text .green_area {
+  background-color: #469687;
+  padding: 40px 30px 30px;
+}
+#housing .kv .kv_text .green_area img {
+  /*width: 90px;*/
+  display: block;
+  margin: 0 auto 30px;
+}
+#housing .kv .kv_text .green_area p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
+}
+#housing .kv .kv_text .op_area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 35px;
+}
+#housing .kv .kv_text .op_area p:first-child {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#housing .kv .kv_text .op_area p:last-child {
+  background-color: #469687;
+  color: #fff;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding: 9px 20px;
+  text-align: center;
+  display: block;
+  margin: 9px auto 0;
+  line-height: 1;
+  width: 130px;
+}
+#housing .gray_bg {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+#housing .gray_bg:last-child {
+  margin-bottom: 60px;
+}
+#housing .gray_bg .w1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#housing .gray_bg .w1000 h2 {
+  font-size: 38px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 60px;
+  padding-bottom: 45px;
+  font-weight: normal !important;
+}
+#housing .gray_bg .w1000 h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background-image: url("../img/common/griy_h2_img.png");
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+}
+#housing .sec1 ul {
+  max-width: 665px;
+  margin: 0 auto 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#housing .sec1 ul li {
+  list-style: none;
+  width: 30%;
+}
+#housing .sec1 ul li img {
+  display: block;
+  width: 100%;
+}
+#housing .sec1 .sec1_konnano {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+#housing .sec1 .sec1_konnano span {
+  font-size: 36px;
+  color: #469687;
+}
+#housing .sec1 .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+#housing .sec1 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#housing .sec1 .kome .fz20 {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  background: linear-gradient(transparent 70%, #c8dfdb 0%);
+  padding-left: 6px;
+}
+#housing .sec1 .kome a {
+  color: #469687;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#housing .sec1 .kome a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#housing .sec1 .kome a span {
+  border-bottom: 1px solid #469687;
+}
+#housing .sec2 .change {
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+#housing .sec2 .change img {
+  display: block;
+  width: 100%;
+}
+#housing .sec2 ul li {
+  margin-bottom: 30px;
+  list-style: none;
+}
+#housing .sec2 ul li .green_ttl {
+  font-size: 18px;
+  color: #469687;
+  margin-bottom: 2px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec2 ul li .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#housing .sec2 ul li .txt::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+#housing .sec2 .toha {
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 130px;
+  height: 32px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #469687;
+  margin-bottom: 5px;
+}
+#housing .sec2 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#housing .sec2 .kome a {
+  color: #469687;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#housing .sec2 .kome a span {
+  border-bottom: 1px solid #469687;
+}
+#housing .sec2 .kome a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#housing .sec3 .txt_box h3 {
+  font-size: 26px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+  letter-spacing: -0.5px;
+}
+#housing .sec3 .txt_box h3 span {
+  background: linear-gradient(transparent 70%, #c8dfdb 0%);
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec3 .txt_box p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+#housing .sec3 .txt_box p:first-child {
+  letter-spacing: -0.4px;
+}
+#housing .sec3 .txt_box p:last-child {
+  letter-spacing: -0.3px;
+}
+#housing .sec3 .txt_box ul {
+  max-width: 860px;
+  padding: 0 10px;
+  margin: 0 auto 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#housing .sec3 .txt_box ul li {
+  width: 31%;
+  list-style: none;
+}
+#housing .sec3 .txt_box ul li img {
+  display: block;
+  width: 100%;
+}
+#housing .sec3 .change {
+  max-width: 1000px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#housing .sec3 .change img {
+  display: block;
+  width: 100%;
+}
+#housing .sec3 .taiou {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+#housing .sec3 .keisan {
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+#housing .sec4 .hosyou_txt li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 2;
+}
+#housing .sec4 .hosyou_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#housing .sec4 .pdf_list {
+  max-width: 620px;
+  padding: 0 10px;
+  margin: 40px auto 65px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#housing .sec4 .pdf_list li {
+  list-style: none;
+  width: 46.7%;
+}
+#housing .sec4 .pdf_list li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 14px 35px 14px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+#housing .sec4 .pdf_list li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 52%;
+  right: 65px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#housing .sec4 .pdf_list li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#housing .sec4 .pdf_list li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#housing .sec4 .pdf_list li:last-child a::after {
+  right: 45px;
+}
+#housing .sec4 .bg_wh {
+  background-color: #fff;
+  padding: 30px;
+}
+#housing .sec4 .bg_wh h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #469687;
+  margin-bottom: 30px;
+}
+#housing .sec4 .bg_wh p, #housing .sec4 .bg_wh .hosyougai_txt {
+  line-height: 2;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec4 .bg_wh p a {
+  color: #469687;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#housing .sec4 .bg_wh p a span {
+  border-bottom: 1px solid #469687;
+}
+#housing .sec4 .bg_wh p a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#housing .sec4 .bg_wh .hosyougai_txt li {
+  list-style: none;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#housing .sec4 .bg_wh .hosyougai_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#housing .sec4 .bg_wh .icon_list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+#housing .sec4 .bg_wh .icon_list li {
+  list-style: none;
+  width: 15.32%;
+  margin-bottom: 15px;
+}
+#housing .sec4 .bg_wh .icon_list li img {
+  display: block;
+  width: 100%;
+}
+#housing .sec4 .bg_wh .icon_list .mbn {
+  margin-bottom: 0;
+}
+#housing .sec5 #table {
+  margin-bottom: 60px;
+  /*プライン１　３種型*/
+}
+#housing .sec5 #table h3 {
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  background-color: #469687;
+  color: #fff;
+  padding: 7px 0;
+  margin-bottom: 20px;
+}
+#housing .sec5 #table table {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+#housing .sec5 #table table th, #housing .sec5 #table table td {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding: 6px 15px;
+}
+#housing .sec5 #table table .bor_gr th {
+  border-bottom: 2px solid #469687;
+}
+#housing .sec5 #table table .bor_gr th:first-child {
+  border-bottom: none;
+}
+#housing .sec5 #table table .bor_gr th:nth-of-type(n+2) {
+  border-left: 2px solid #469687;
+}
+#housing .sec5 #table table .bor_gr_sub th {
+  border-left: 1px solid #469687;
+}
+#housing .sec5 #table table .bor_gr_sub th:nth-child(odd) {
+  border-left: 2px solid #469687;
+}
+#housing .sec5 #table table td {
+  border-bottom: 2px solid #469687;
+}
+#housing .sec5 #table table td:nth-of-type(n+2) {
+  text-align: right;
+  border-left: 1px solid #469687;
+}
+#housing .sec5 #table table td:nth-of-type(2n) {
+  border-left: 2px solid #469687;
+}
+#housing .sec5 #table table td:first-child {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec5 #table table td span {
+  font-size: 13px;
+}
+#housing .sec5 #table table tr:last-child td {
+  border-bottom: none;
+}
+#housing .sec5 #table table .bg_gr {
+  background-color: #c8dfdb;
+}
+#housing .sec5 #table #pattern1 tr .w340 {
+  width: 34%;
+}
+#housing .sec5 #table #pattern1 tr .w220 {
+  width: 22%;
+}
+#housing .sec5 #table p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: -40px;
+  padding-left: 42px;
+}
+#housing .sec5 .fwb {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#housing .sec5 .tyuui {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec5 .tyuui span {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+#housing .sec6 .sec6_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#housing .sec6 ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#housing .sec6 ul li {
+  list-style: none;
+  width: 29.4%;
+  position: relative;
+}
+#housing .sec6 ul li figure img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#housing .sec6 ul li figure figcaption {
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.8;
+}
+#housing .sec6 ul li figure figcaption .green_txt {
+  color: #469687;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec6 ul .yazi::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  right: -15%;
+  width: 8.85%;
+  height: 56px;
+  display: block;
+  background-image: url("../img/housing/yazi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#housing .sec7 .sec7_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#housing .sec7 .sec7_txt a {
+  color: #469687;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#housing .sec7 .sec7_txt a span {
+  border-bottom: 1px solid #469687;
+}
+#housing .sec7 .sec7_txt a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#housing .sec7 .contact_link {
+  margin-bottom: 40px;
+}
+#housing .sec7 .contact_link .wh {
+  background-color: #fff;
+  padding: 30px 55px;
+}
+#housing .sec7 .contact_link .ttl {
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #469687;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#housing .sec7 .contact_link .df {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#housing .sec7 .contact_link .df .con {
+  width: 47.2%;
+}
+#housing .sec7 .contact_link .df .con a {
+  display: block;
+  width: 100%;
+}
+#housing .sec7 .contact_link .df .con a img {
+  display: block;
+  width: 100%;
+}
+#housing .sec7 .contact_link p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec7 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#housing .sec8 .qa li {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+}
+#housing .sec8 .qa li:last-child {
+  margin-bottom: 0;
+}
+#housing .sec8 .qa li .q_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+#housing .sec8 .qa li .q_area .q_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #469687;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #fff;
+}
+#housing .sec8 .qa li .q_area .q_txt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .sec8 .qa li .a_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+}
+#housing .sec8 .qa li .a_area .a_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #c8dfdb;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #469687;
+}
+#housing .sec8 .qa li .a_area .a_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  padding-top: 5px;
+}
+#housing .sec8 .qa li .a_area .a_txt a {
+  text-decoration: none;
+  color: #000;
+}
+#housing .sec8 .qa li .a_area .a_txt a.mail {
+  border-bottom: 1px solid #000;
+}
+#housing .regulations {
+  max-width: 610px;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+#housing .regulations h3 {
+  color: #469687;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#housing .regulations .old {
+  margin-bottom: 40px;
+}
+#housing .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#housing .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#housing .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #000;
+}
+#housing .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#housing .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#housing .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#housing .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#housing .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#housing .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED 住宅設備機器延長保証 ==========*/
+/*========== ウォッチ延長保証 ==========*/
+#watch .kv {
+  position: relative;
+  background-image: url("../img/watch/kv.png");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#watch .kv .kv_img {
+  display: block;
+  width: 100%;
+}
+#watch .kv .kv_text {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+}
+#watch .kv .kv_text .blue_area {
+  background-color: #3c5582;
+  padding: 15px 30px 33px;
+}
+#watch .kv .kv_text .blue_area img {
+  width: 207px;
+  display: block;
+  margin: 0 auto 20px;
+}
+#watch .kv .kv_text .blue_area p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
+}
+#watch .kv .kv_text .op_area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+#watch .kv .kv_text .op_area p {
+  /*&:last-child{
+    background-color: $green;
+	color: #fff;
+	font-size: 22px;
+	font-family: $SansMedium;
+	padding: 9px 20px;
+	text-align: center;
+	display: block;
+	margin: 9px auto 0;
+	line-height: 1;
+	width: 130px;
+  }*/
+}
+#watch .kv .kv_text .op_area p:first-child {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#watch .kv .kv_text .op_area .thin {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+  margin: 20px auto 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#watch .kv .kv_text .op_area .thin .thin_thin {
+  background-color: #3c5582;
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 10px;
+}
+#watch .kv .kv_text .op_area .thin .thin_thin:first-child {
+  padding: 19px 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #fff;
+}
+#watch .kv .kv_text .op_area .thin .thin_thin:last-child {
+  padding: 7px;
+  margin-left: 10px;
+  color: #fff;
+  text-align: center;
+}
+#watch .kv .kv_text .op_area .thin .thin_thin:last-child span {
+  font-size: 18px;
+}
+#watch .gray_bg {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+#watch .gray_bg:last-child {
+  margin-bottom: 60px;
+}
+#watch .gray_bg .w1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#watch .gray_bg .w1000 h2 {
+  font-size: 38px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 60px;
+  padding-bottom: 45px;
+  font-weight: normal !important;
+}
+#watch .gray_bg .w1000 h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background-image: url("../img/common/griy_h2_img.png");
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+}
+#watch .sec1 ul {
+  max-width: 675px;
+  margin: 0 auto 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#watch .sec1 ul li {
+  list-style: none;
+  width: 31%;
+}
+#watch .sec1 ul li img {
+  display: block;
+  width: 100%;
+}
+#watch .sec1 .sec1_konnano {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+#watch .sec1 .sec1_konnano span {
+  font-size: 36px;
+  color: #3c5582;
+}
+#watch .sec1 .trai h3 {
+  text-align: center;
+  background-color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#watch .sec1 .trai h3::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 0 25px;
+  border-color: #3c5582 transparent transparent transparent;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#watch .sec1 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+}
+#watch .sec1 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px;
+  max-width: 550px;
+}
+#watch .sec1 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#watch .sec1 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#watch .sec1 .trai .wh_gb .kome dl {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+#watch .sec1 .trai .wh_gb .kome dl dt {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 18.7%;
+  padding-left: 15px;
+}
+#watch .sec1 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 81.3%;
+}
+#watch .sec1 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#watch .sec1 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #3c5582;
+}
+#watch .sec1 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#watch .sec1 .trai .wh_gb .kome dl:first-child {
+  border: 3px solid #3c5582;
+  margin-bottom: 20px;
+}
+#watch .sec1 .trai .wh_gb .kome dl:first-child dt {
+  color: #3c5582;
+}
+#watch .sec1 .trai .wh_gb .kome dl:first-child dd a {
+  color: #3c5582;
+}
+#watch .sec1 .trai .wh_gb .kome dl:last-child {
+  background-color: #3c5582;
+}
+#watch .sec1 .trai .wh_gb .kome dl:last-child dt, #watch .sec1 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#watch .sec1 .trai .wh_gb .kome dl:last-child dt a, #watch .sec1 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#watch .sec1 .trai .wh_gb .kome dl:last-child dt a span, #watch .sec1 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#watch .sec2 .change {
+  margin: 0 auto 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#watch .sec2 .change div {
+  width: 48%;
+}
+#watch .sec2 .change div img {
+  display: block;
+  width: 100%;
+}
+#watch .sec2 ul li {
+  margin-bottom: 30px;
+  list-style: none;
+}
+#watch .sec2 ul li .blue_ttl {
+  font-size: 18px;
+  color: #3c5582;
+  margin-bottom: 2px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec2 ul li .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#watch .sec2 ul li .txt::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+#watch .sec2 ul li .txt_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#watch .sec3 .dddd {
+  margin-bottom: 40px;
+}
+#watch .sec3 .dddd dl dt {
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 130px;
+  text-align: center;
+}
+#watch .sec3 .dddd dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec3 .dddd dl:first-child {
+  margin-bottom: 20px;
+}
+#watch .sec3 .dddd dl:first-child dt {
+  background-color: #fff;
+  border: 3px solid #3c5582;
+  color: #3c5582;
+}
+#watch .sec3 .dddd dl:last-child dt {
+  color: #fff;
+  background-color: #3c5582;
+  padding: 3px 0;
+}
+#watch .sec3 img {
+  display: block;
+  width: 100%;
+}
+#watch .sec4 .g_up {
+  margin-bottom: 60px;
+}
+#watch .sec4 .g_up h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+}
+#watch .sec4 .g_up dl {
+  margin-bottom: 20px;
+}
+#watch .sec4 .g_up dl dt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#watch .sec4 .g_up dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding-left: 16px;
+}
+#watch .sec4 .sizen h3 {
+  background-color: #fff;
+  border: 3px solid #3c5582;
+  padding: 4px 0;
+  color: #3c5582;
+}
+#watch .sec4 .ziko h3 {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 7px 0;
+}
+#watch .sec4 img {
+  display: block;
+  width: 100%;
+}
+#watch .sec5 .hosyou_txt li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 2;
+}
+#watch .sec5 .hosyou_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#watch .sec5 .pdf_list {
+  max-width: 620px;
+  padding: 0 10px;
+  margin: 40px auto 65px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#watch .sec5 .pdf_list li {
+  list-style: none;
+  width: 46.7%;
+}
+#watch .sec5 .pdf_list li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 14px 35px 14px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+#watch .sec5 .pdf_list li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 52%;
+  right: 65px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#watch .sec5 .pdf_list li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#watch .sec5 .pdf_list li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#watch .sec5 .pdf_list li:last-child a::after {
+  right: 45px;
+}
+#watch .sec5 .trai {
+  border: 4px solid #3c5582;
+  margin-bottom: 60px;
+}
+#watch .sec5 .trai h3 {
+  text-align: center;
+  background-color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#watch .sec5 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+  margin-bottom: 60px;
+}
+#watch .sec5 .trai .wh_gb .plus {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#watch .sec5 .trai .wh_gb .plus span {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  width: 30%;
+  min-width: 140px;
+}
+#watch .sec5 .trai .wh_gb .plus span:first-child {
+  border: 3px solid #3c5582;
+  color: #3c5582;
+  padding: 4px 0;
+  margin-right: 15px;
+}
+#watch .sec5 .trai .wh_gb .plus span:last-child {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 7px 0;
+  margin-left: 15px;
+}
+#watch .sec5 .trai .wh_gb .plus_txt {
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#watch .sec5 .trai .wh_gb .wac_plus {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#watch .sec5 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 50px;
+  max-width: 550px;
+}
+#watch .sec5 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#watch .sec5 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#watch .sec5 .trai .wh_gb .kome dl {
+  padding: 20px;
+}
+#watch .sec5 .trai .wh_gb .kome dl dt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#watch .sec5 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec5 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#watch .sec5 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #3c5582;
+}
+#watch .sec5 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#watch .sec5 .trai .wh_gb .kome dl:first-child {
+  background-color: #c4ccda;
+  margin-bottom: 20px;
+}
+#watch .sec5 .trai .wh_gb .kome dl:first-child dt {
+  color: #3c5582;
+}
+#watch .sec5 .trai .wh_gb .kome dl:first-child dd a {
+  color: #3c5582;
+}
+#watch .sec5 .trai .wh_gb .kome dl:last-child {
+  background-color: #3c5582;
+}
+#watch .sec5 .trai .wh_gb .kome dl:last-child dt, #watch .sec5 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#watch .sec5 .trai .wh_gb .kome dl:last-child dt a, #watch .sec5 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#watch .sec5 .trai .wh_gb .kome dl:last-child dt a span, #watch .sec5 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#watch .sec5 .bg_wh {
+  background-color: #fff;
+  padding: 30px;
+}
+#watch .sec5 .bg_wh .ttl {
+  font-size: 24px;
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#watch .sec5 .bg_wh ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#watch .sec5 .bg_wh ul li {
+  width: 14.4%;
+  list-style: none;
+  margin-bottom: 15px;
+}
+#watch .sec5 .bg_wh ul li img {
+  display: block;
+  width: 100%;
+}
+#watch .sec5 .bg_wh .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec5 .bg_wh ol {
+  list-style: none;
+}
+#watch .sec5 .bg_wh ol li {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  list-style: none;
+}
+#watch .sec5 .bg_wh.mb60 {
+  margin-bottom: 60px;
+}
+#watch .sec9 .tb {
+  margin-bottom: 60px;
+}
+#watch .sec9 .tb .ttl {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  background-color: #3c5582;
+  padding: 7px;
+}
+#watch .sec9 .tb table {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+#watch .sec9 .tb table tr:first-child {
+  background-color: #c4ccda;
+}
+#watch .sec9 .tb table tr:last-child {
+  border-top: 3px solid #3c5582;
+}
+#watch .sec9 .tb table tr td, #watch .sec9 .tb table tr th {
+  padding: 13px 10px;
+  border-right: 1px solid #3c5582;
+  font-size: 18px;
+}
+#watch .sec9 .tb table tr td:first-child, #watch .sec9 .tb table tr th:first-child {
+  width: 21%;
+  text-align: center;
+}
+#watch .sec9 .tb table tr td:nth-of-type(2n), #watch .sec9 .tb table tr th:nth-of-type(2n) {
+  width: 15% !important;
+  text-align: center;
+}
+#watch .sec9 .tb table tr td:nth-of-type(n+2), #watch .sec9 .tb table tr th:nth-of-type(n+2) {
+  width: 10%;
+  text-align: center;
+}
+#watch .sec9 .tb table tr td:last-child, #watch .sec9 .tb table tr th:last-child {
+  width: 54% !important;
+  text-align: left;
+  border-right: none;
+}
+#watch .sec9 .tb table tr th {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec9 .tb table tr th:last-child {
+  text-align: center;
+}
+#watch .sec9 .tb table tr td {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec9 .tb table tr td .box {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 8px 10px;
+  display: inline-block;
+  margin: 0 10px;
+}
+#watch .sec9 .tb table tr td .box:first-child {
+  margin-left: 0;
+}
+#watch .sec9 .tb table tr td .price {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec9 .tb table tr td:first-child {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  letter-spacing: -1px;
+}
+#watch .sec9 .fwb {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#watch .sec9 .tyuui {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec9 .tyuui span {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+#watch .sec6 .sec6_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#watch .sec6 ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#watch .sec6 ul li {
+  list-style: none;
+  width: 29.4%;
+  position: relative;
+}
+#watch .sec6 ul li figure img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#watch .sec6 ul li figure figcaption {
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.8;
+}
+#watch .sec6 ul li figure figcaption .blue_txt {
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec6 ul .yazi::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  right: -15%;
+  width: 8.85%;
+  height: 56px;
+  display: block;
+  background-image: url("../img/watch/yazi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#watch .sec7 .sec7_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#watch .sec7 .sec7_txt a {
+  color: #3c5582;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#watch .sec7 .sec7_txt a span {
+  border-bottom: 1px solid #3c5582;
+}
+#watch .sec7 .sec7_txt a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#watch .sec7 .contact_link {
+  margin-bottom: 40px;
+}
+#watch .sec7 .contact_link .wh {
+  background-color: #fff;
+  padding: 30px 55px;
+}
+#watch .sec7 .contact_link .ttl {
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#watch .sec7 .contact_link .df {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#watch .sec7 .contact_link .df .con {
+  width: 47.2%;
+}
+#watch .sec7 .contact_link .df .con a {
+  display: block;
+  width: 100%;
+}
+#watch .sec7 .contact_link .df .con a img {
+  display: block;
+  width: 100%;
+}
+#watch .sec7 .contact_link p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec7 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#watch .sec8 .qa li {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+}
+#watch .sec8 .qa li:last-child {
+  margin-bottom: 0;
+}
+#watch .sec8 .qa li .q_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+#watch .sec8 .qa li .q_area .q_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #3c5582;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #fff;
+}
+#watch .sec8 .qa li .q_area .q_txt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .sec8 .qa li .a_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+}
+#watch .sec8 .qa li .a_area .a_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #c4ccda;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #3c5582;
+}
+#watch .sec8 .qa li .a_area .a_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  padding-top: 5px;
+}
+#watch .sec8 .qa li .a_area .a_txt a {
+  text-decoration: none;
+  color: #000;
+}
+#watch .sec8 .qa li .a_area .a_txt a.mail {
+  border-bottom: 1px solid #000;
+}
+#watch .regulations {
+  max-width: 730px;
+  margin: 60px auto;
+}
+#watch .regulations h3 {
+  color: #3c5582;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#watch .regulations .old {
+  margin-bottom: 40px;
+}
+#watch .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#watch .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#watch .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #000;
+}
+#watch .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#watch .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#watch .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#watch .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#watch .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#watch .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED ウォッチ延長保証 ==========*/
+@media all and (max-width: 768px) {
+  main {
+    padding-top: 61px;
+  }
+
+  /*========= TOP ===========*/
+  #top .kv {
+    height: 240px;
+  }
+  #top .kv_text {
+    padding: 0 15px;
+    margin-top: -15px;
+  }
+  #top .kv_text h2 {
+    font-size: 25px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+  #top .kv_text h2 span {
+    font-size: 26px;
+  }
+  #top .kv_text p {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  #top .kv_text p:last-child {
+    margin-bottom: 50px;
+  }
+  #top .service {
+    padding: 50px 15px;
+  }
+  #top .service .w1200 h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  #top .service .w1200 .service_box {
+    display: block;
+  }
+  #top .service .w1200 .service_box div {
+    width: 100%;
+  }
+  #top .service .w1200 .service_box .box_img {
+    min-height: inherit;
+  }
+  #top .service .w1200 .service_box .box_img img {
+    display: block;
+    width: 100%;
+  }
+  #top .service .w1200 .service_box .box_text {
+    padding: 30px 15px !important;
+  }
+  #top .service .w1200 .service_box .box_text h3 {
+    font-size: 27px;
+    margin-bottom: 25px;
+  }
+  #top .service .w1200 .service_box .box_text h3 span {
+    font-size: 16px;
+  }
+  #top .service .w1200 .service_box .box_text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  #top .service .w1200 .service_box .box_text a {
+    max-width: 250px;
+    font-size: 14px;
+    padding: 13.5px 0;
+  }
+  #top .service .w1200 .service_box:last-child {
+    margin-bottom: 0;
+  }
+  #top .service .w1200 .service01 .box_text p {
+    line-height: 1;
+  }
+  #top .service .w1200 .service01 .box_text .thin {
+    margin: 25px auto;
+    font-size: 17px;
+    padding: 8px 0;
+  }
+  #top .service .w1200 .service02 .box_text .thin {
+    margin: 25px auto;
+    font-size: 18px;
+  }
+  #top .service .w1200 .service02 .box_text .thin span {
+    font-size: 16px;
+  }
+  #top .service .w1200 .service03 .box_text .thin {
+    margin: 25px auto;
+    font-size: 17px;
+  }
+  #top .service .w1200 .service04 .box_text .thin {
+    justify-content: space-between;
+    margin: 25px auto;
+  }
+  #top .service .w1200 .service04 .box_text .thin .thin_thin {
+    font-size: 18px;
+  }
+  #top .service .w1200 .service04 .box_text .thin .thin_thin:first-child {
+    font-size: 17px;
+    margin: 0 8px 0 0;
+    width: 32%;
+    padding: 18.5px 0;
+  }
+  #top .service .w1200 .service04 .box_text .thin .thin_thin:last-child {
+    font-size: 18px;
+    margin: 0 0 0 8px;
+    width: 60%;
+    padding: 8.5px 0;
+  }
+  #top .service .w1200 .service04 .box_text .thin .thin_thin:last-child span {
+    font-size: 12px;
+  }
+  #top .regulations {
+    padding: 0 15px;
+    margin: 50px 0;
+  }
+  #top .regulations h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #top .regulations h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #top .regulations ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  #top .regulations ul li a {
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 50px;
+    padding: 21px 60px 21px 30px;
+  }
+  #top .privacy {
+    padding: 0 15px;
+    margin: 0 auto 100px;
+  }
+  #top .privacy h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #top .privacy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /*========= END TOP ===========*/
+  /*========= 家電延長保証 ===========*/
+  #standard .kv {
+    height: 250px;
+    margin-bottom: 0;
+  }
+  #standard .kv .kv_text {
+    width: 315px;
+    height: 315px;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  #standard .kv .kv_text .light_area {
+    padding: 35px 20px 25px;
+  }
+  #standard .kv .kv_text .light_area img {
+    margin-bottom: 25px;
+    width: 83px;
+  }
+  #standard .kv .kv_text .light_area p {
+    font-size: 31.5px;
+  }
+  #standard .kv .kv_text .op_area p:first-child {
+    font-size: 15px;
+  }
+  #standard .kv .kv_text .op_area p:last-child {
+    font-size: 16px;
+    width: 102.5px;
+    padding: 6px 0;
+    margin-top: 12px;
+  }
+  #standard .gray_bg {
+    padding: 50px 15px;
+    margin-bottom: 25px;
+  }
+  #standard .gray_bg .w1000 h2 {
+    font-size: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+  }
+  #standard .gray_bg .w1000 h2 span {
+    right: 45.3%;
+  }
+  #standard .sec1 {
+    padding-top: 275px;
+  }
+  #standard .sec1 ul {
+    margin-bottom: 15px;
+  }
+  #standard .sec1 ul li {
+    width: 32%;
+  }
+  #standard .sec1 .sec1_konnano {
+    font-size: 17.5px;
+    margin-bottom: 30px;
+  }
+  #standard .sec1 .sec1_konnano span {
+    font-size: 23px;
+  }
+  #standard .sec1 .manufacturer {
+    margin-bottom: 30px;
+  }
+  #standard .sec1 .kome {
+    font-size: 14px;
+  }
+  #standard .sec1 .kome .fz20 {
+    font-size: 14px;
+  }
+  #standard .sec2 h2 {
+    letter-spacing: -0.5px;
+  }
+  #standard .sec2 .change {
+    margin-bottom: 30px;
+  }
+  #standard .sec2 .change div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #standard .sec2 .change div:last-child {
+    margin-bottom: 0;
+  }
+  #standard .sec2 ul li {
+    margin-bottom: 20px;
+  }
+  #standard .sec2 ul li .green_ttl {
+    font-size: 15px;
+  }
+  #standard .sec2 ul li .txt {
+    font-size: 14px;
+  }
+  #standard .sec2 ul li:last-child {
+    margin-bottom: 30px;
+  }
+  #standard .sec2 .toha {
+    font-size: 15px;
+  }
+  #standard .sec2 .kome {
+    font-size: 14px;
+  }
+  #standard .sec3 .txt_box h3 {
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  #standard .sec3 .txt_box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #standard .sec3 .txt_box ul {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  #standard .sec3 .guraf {
+    margin-bottom: 10px;
+  }
+  #standard .sec3 .keisan {
+    margin-bottom: 10px;
+  }
+  #standard .sec4 .hosyou_txt li {
+    font-size: 14px;
+  }
+  #standard .sec4 .pdf_list {
+    padding: 0;
+    margin: 20px auto 30px;
+  }
+  #standard .sec4 .pdf_list li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #standard .sec4 .bg_wh {
+    padding: 25px 15px;
+  }
+  #standard .sec4 .bg_wh h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #standard .sec4 .bg_wh p, #standard .sec4 .bg_wh .hosyougai_txt {
+    font-size: 14px;
+  }
+  #standard .sec4 .bg_wh .icon_list {
+    margin-top: 25px;
+  }
+  #standard .sec4 .bg_wh .icon_list li {
+    width: 30.5%;
+  }
+  #standard .sec5 .pdf_list {
+    margin: 20px auto 30px;
+  }
+  #standard .sec5 .pdf_list li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #standard .sec5 .pdf_list li:last-child {
+    margin-bottom: 0;
+  }
+  #standard .sec5 .bg_wh {
+    padding: 25px 15px;
+  }
+  #standard .sec5 .bg_wh .icon_list li {
+    width: 30%;
+  }
+  #standard .sec5 .fwb {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #standard .sec5 .tyuui {
+    font-size: 14px;
+  }
+  #standard .sec5 .tyuui span {
+    display: block;
+    width: 235px;
+    margin-bottom: 20px;
+  }
+  #standard .sec5 .accordionbox {
+    margin-bottom: 50px;
+  }
+  #standard .sec5 .accordionbox .acd_ttl {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #469687;
+  }
+  #standard .sec5 .accordionbox .accordionlist {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix {
+    position: relative;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .title {
+    background-color: #c8dfdb;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .title p {
+    color: #000;
+    font-size: 16px;
+    padding: 17.5px;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    float: right;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    position: absolute;
+    left: 6px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon.active span:nth-of-type(1) {
+    display: none;
+  }
+  #standard .sec5 .accordionbox .accordionlist .clearfix .accordion_icon.active span:nth-of-type(2) {
+    top: 5px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  #standard .sec5 .accordionbox .accordionlist dd {
+    padding: 20px 15px;
+    display: none;
+    background-color: #fff;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr {
+    border-bottom: 1.5px solid #469687;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr th, #standard .sec5 .accordionbox .accordionlist dd table tr td {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr th span, #standard .sec5 .accordionbox .accordionlist dd table tr td span {
+    font-size: 10px;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr td {
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr td:first-child {
+    width: 62%;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr td:nth-of-type(2n) {
+    width: 19%;
+    border-left: 1.5px solid #469687;
+    border-right: 1px solid #469687;
+    text-align: right;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table tr td:nth-of-type(n+2) {
+    width: 19%;
+    text-align: right;
+  }
+  #standard .sec5 .accordionbox .accordionlist dd table .bg_gr {
+    background-color: #c8dfdb;
+    border-top: 1.5px solid #469687;
+  }
+  #standard .sec5 .accordionbox .kome p {
+    font-size: 14px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    padding-left: 36px;
+    text-indent: -36px;
+  }
+  #standard .sec9 .hyou {
+    margin-bottom: 55px;
+  }
+  #standard .sec9 .hyou:last-child {
+    margin-bottom: 50px;
+  }
+  #standard .sec9 .hyou .ttl {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    background-color: #3291a5;
+    padding: 4px 0;
+    margin-bottom: 15px;
+  }
+  #standard .sec9 .hyou .block {
+    margin-bottom: 30px;
+  }
+  #standard .sec9 .hyou .block .plan_name {
+    font-size: 14.5px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin-bottom: 10px;
+  }
+  #standard .sec9 .hyou .block .df {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #3291a5;
+  }
+  #standard .sec9 .hyou .block .df .w61p {
+    width: 61%;
+    border-right: 2px solid #3291a5;
+  }
+  #standard .sec9 .hyou .block .df .w39p {
+    width: 39%;
+  }
+  #standard .sec9 .hyou .block dl dt {
+    background-color: #c3dee5;
+  }
+  #standard .sec9 .hyou .block dl dd {
+    background-color: #fff;
+  }
+  #standard .sec9 .hyou .block dl dd .box {
+    background-color: #3291a5;
+    color: #fff;
+    padding: 2px 4px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  #standard .sec9 .hyou .block dl dd .box:first-child {
+    margin-left: 0;
+  }
+  #standard .sec9 .hyou .block dl dd .price {
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #standard .sec9 .hyou .block dl dt, #standard .sec9 .hyou .block dl dd {
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    font-size: 13px;
+    padding: 5.5px 15px;
+  }
+  #standard .sec9 .hyou .block .mb15 {
+    margin-bottom: 15px;
+  }
+  #standard .sec9 .hyou .kome {
+    font-size: 14px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    padding-left: 16px;
+    text-indent: -16px;
+  }
+  #standard .sec9 .fwb {
+    font-size: 14px;
+  }
+  #standard .sec9 .tyuui {
+    font-size: 14px;
+  }
+  #standard .sec9 .tyuui span {
+    display: block;
+    width: 235px;
+    margin-bottom: 20px;
+  }
+  #standard .sec6 .sec6_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #standard .sec6 ul {
+    flex-wrap: wrap;
+  }
+  #standard .sec6 ul li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #standard .sec6 ul li figure {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #standard .sec6 ul li figure img {
+    width: 42.7%;
+    margin-bottom: 0;
+  }
+  #standard .sec6 ul li figure figcaption {
+    width: 50.2%;
+    font-size: 14px;
+  }
+  #standard .sec6 ul li figure figcaption .fz16 {
+    font-size: 12px;
+  }
+  #standard .sec6 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #standard .sec6 ul .yazi::after {
+    left: 20%;
+    /* bottom: -23%; */
+    transform: rotate(90deg);
+    right: inherit;
+    top: inherit;
+    width: 13px;
+    height: 26px;
+  }
+  #standard .sec7 .sec7_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #standard .sec7 .contact_link {
+    margin-bottom: 25px;
+  }
+  #standard .sec7 .contact_link .wh {
+    padding: 20px 15px;
+  }
+  #standard .sec7 .contact_link .ttl {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #standard .sec7 .contact_link .df {
+    flex-wrap: wrap;
+  }
+  #standard .sec7 .contact_link .df .con {
+    width: 100%;
+  }
+  #standard .sec7 .contact_link .df .con:first-child {
+    margin-bottom: 25px;
+  }
+  #standard .sec7 .contact_link p {
+    font-size: 13px;
+  }
+  #standard .sec7 .kome {
+    font-size: 13px;
+  }
+  #standard .sec8 .qa li {
+    padding: 15px;
+  }
+  #standard .sec8 .qa li .q_area {
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  #standard .sec8 .qa li .q_area .q_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #standard .sec8 .qa li .q_area .q_txt {
+    font-size: 16px;
+  }
+  #standard .sec8 .qa li .a_area {
+    align-items: flex-start;
+  }
+  #standard .sec8 .qa li .a_area .a_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #standard .sec8 .qa li .a_area .a_txt {
+    font-size: 14px;
+    padding-top: 0;
+    line-height: 1.5;
+  }
+  #standard .regulations {
+    padding: 0 15px;
+    margin: 50px 0;
+  }
+  #standard .regulations h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #standard .regulations h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #standard .regulations ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  #standard .regulations ul li a {
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 50px;
+    padding: 21px 60px 21px 30px;
+  }
+  #standard .privacy {
+    padding: 0 15px;
+    margin: 0 auto 100px;
+  }
+  #standard .privacy h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #standard .privacy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /*========= END 家電延長保証 ===========*/
+  /*========= 物損付家電延長保証 ===========*/
+  #accident .kv {
+    height: 250px;
+    margin-bottom: 0;
+  }
+  #accident .kv .kv_text {
+    width: 315px;
+    height: 315px;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  #accident .kv .kv_text .red_area {
+    padding: 16px 0;
+  }
+  #accident .kv .kv_text .red_area img {
+    margin-bottom: 25px;
+    width: 160px;
+  }
+  #accident .kv .kv_text .red_area p {
+    font-size: 31.5px;
+  }
+  #accident .kv .kv_text .red_area p span {
+    font-size: 23.5px;
+  }
+  #accident .kv .kv_text .op_area {
+    padding: 15px;
+  }
+  #accident .kv .kv_text .op_area p:first-child {
+    font-size: 15px;
+  }
+  #accident .kv .kv_text .op_area p:last-child {
+    font-size: 17px;
+    width: 165px;
+    padding: 6px 0;
+  }
+  #accident .kv .kv_text .op_area p:last-child span {
+    font-size: 15px;
+  }
+  #accident .gray_bg {
+    padding: 50px 15px;
+    margin-bottom: 25px;
+  }
+  #accident .gray_bg .w1000 h2 {
+    font-size: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+  #accident .gray_bg .w1000 h2 span {
+    right: 45.3%;
+  }
+  #accident .sec1 {
+    padding-top: 275px;
+  }
+  #accident .sec1 ul {
+    margin-bottom: 15px;
+  }
+  #accident .sec1 ul li {
+    width: 32%;
+  }
+  #accident .sec1 .sec1_konnano {
+    font-size: 17.5px;
+    margin-bottom: 30px;
+  }
+  #accident .sec1 .sec1_konnano span {
+    font-size: 23px;
+  }
+  #accident .sec1 .manufacturer {
+    margin-bottom: 30px;
+  }
+  #accident .sec1 .kome {
+    font-size: 14px;
+  }
+  #accident .sec1 .kome .fz20 {
+    font-size: 14px;
+  }
+  #accident .sec1 .trai h3 {
+    font-size: 16px;
+    padding: 6px;
+  }
+  #accident .sec1 .trai .wh_gb {
+    padding: 25px 15px 15px;
+  }
+  #accident .sec1 .trai .wh_gb .manuf_txt {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  #accident .sec1 .trai .wh_gb .kome dl {
+    display: block;
+  }
+  #accident .sec1 .trai .wh_gb .kome dl dt, #accident .sec1 .trai .wh_gb .kome dl dd {
+    width: 100%;
+  }
+  #accident .sec1 .trai .wh_gb .kome dl dt {
+    font-size: 18px;
+    padding-left: 0;
+  }
+  #accident .sec1 .trai .wh_gb .kome dl dd {
+    font-size: 14px;
+  }
+  #accident .sec1 .trai .wh_gb .kome dl:first-child {
+    margin-bottom: 15px;
+  }
+  #accident .sec2 h2 {
+    letter-spacing: -0.5px;
+  }
+  #accident .sec2 .change {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  #accident .sec2 .change div {
+    width: 100%;
+  }
+  #accident .sec2 .change div:first-child {
+    margin-bottom: 30px;
+  }
+  #accident .sec2 ul li {
+    margin-bottom: 20px;
+  }
+  #accident .sec2 ul li .red_ttl {
+    font-size: 15px;
+  }
+  #accident .sec2 ul li .txt {
+    font-size: 14px;
+  }
+  #accident .sec2 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #accident .sec2 .toha {
+    font-size: 15px;
+  }
+  #accident .sec2 .kome {
+    font-size: 14px;
+  }
+  #accident .sec3 .txt_box h3 {
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  #accident .sec3 .txt_box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #accident .sec3 .txt_box ul {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  #accident .sec3 .change {
+    margin-bottom: 10px;
+  }
+  #accident .sec3 .keisan {
+    margin-bottom: 10px;
+  }
+  #accident .sec3 .dddd {
+    margin-bottom: 20px;
+  }
+  #accident .sec3 .dddd dl dt {
+    font-size: 16px;
+    width: 80px;
+  }
+  #accident .sec3 .dddd dl dt:first-child {
+    border: 2px solid #af4b6e;
+  }
+  #accident .sec3 .dddd dl dd {
+    font-size: 14px;
+  }
+  #accident .sec4 .g_up {
+    margin-bottom: 40px;
+  }
+  #accident .sec4 .g_up h3 {
+    font-size: 18px;
+  }
+  #accident .sec4 .g_up dl {
+    margin-bottom: 15px;
+  }
+  #accident .sec4 .g_up dl dt {
+    font-size: 16px;
+  }
+  #accident .sec4 .g_up dl dd {
+    font-size: 14px;
+  }
+  #accident .sec4 .sizen h3 {
+    background-color: #fff;
+    border: 2px solid #af4b6e;
+    padding: 2px 0;
+  }
+  #accident .sec4 .ziko h3 {
+    background-color: #af4b6e;
+    color: #fff;
+    padding: 4px 0;
+  }
+  #accident .sec4 img {
+    display: block;
+    width: 100%;
+  }
+  #accident .sec5 .hosyou_txt li {
+    font-size: 14px;
+  }
+  #accident .sec5 .pdf_list {
+    margin: 20px auto 30px;
+    padding: 0;
+  }
+  #accident .sec5 .pdf_list li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #accident .sec5 .pdf_list li a {
+    font-size: 14px;
+  }
+  #accident .sec5 .trai {
+    margin-bottom: 30px;
+  }
+  #accident .sec5 .trai h3 {
+    font-size: 18px;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+  }
+  #accident .sec5 .trai .wh_gb {
+    padding: 15px;
+  }
+  #accident .sec5 .trai .wh_gb .plus {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  #accident .sec5 .trai .wh_gb .plus span {
+    font-size: 18px;
+    min-width: inherit;
+    width: 43%;
+  }
+  #accident .sec5 .trai .wh_gb .plus span:first-child {
+    margin-right: 10px;
+  }
+  #accident .sec5 .trai .wh_gb .plus span:last-child {
+    margin-left: 10px;
+  }
+  #accident .sec5 .trai .wh_gb .plus_txt {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  #accident .sec5 .trai .wh_gb .wac_plus {
+    font-size: 14px;
+  }
+  #accident .sec5 .trai .wh_gb .manufacturer {
+    margin-bottom: 15px;
+  }
+  #accident .sec5 .trai .wh_gb .kome dl {
+    margin-bottom: 15px;
+  }
+  #accident .sec5 .trai .wh_gb .kome dl dt {
+    font-size: 18px;
+  }
+  #accident .sec5 .trai .wh_gb .kome dl dd {
+    font-size: 14px;
+  }
+  #accident .sec5 .trai .wh_gb .kome dl dd a img {
+    font-size: 14px;
+  }
+  #accident .sec5 .trai .wh_gb .kome dl:last-child {
+    margin-bottom: 0;
+  }
+  #accident .sec5 .bg_wh {
+    padding: 25px 15px;
+  }
+  #accident .sec5 .bg_wh .ttl {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #accident .sec5 .bg_wh ul {
+    margin-bottom: 0;
+  }
+  #accident .sec5 .bg_wh ul li {
+    width: 30%;
+  }
+  #accident .sec5 .bg_wh .txt {
+    font-size: 14px;
+  }
+  #accident .sec9 .hyou {
+    margin-bottom: 55px;
+  }
+  #accident .sec9 .hyou:last-child {
+    margin-bottom: 50px;
+  }
+  #accident .sec9 .hyou .ttl {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    background-color: #af4b6e;
+    padding: 4px 0;
+    margin-bottom: 15px;
+  }
+  #accident .sec9 .hyou .block {
+    margin-bottom: 30px;
+  }
+  #accident .sec9 .hyou .block:last-child {
+    margin-bottom: 0;
+  }
+  #accident .sec9 .hyou .block .plan_name {
+    font-size: 14.5px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin-bottom: 10px;
+  }
+  #accident .sec9 .hyou .block .df {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #af4b6e;
+  }
+  #accident .sec9 .hyou .block .df .w61p {
+    width: 61%;
+    border-right: 2px solid #af4b6e;
+  }
+  #accident .sec9 .hyou .block .df .w39p {
+    width: 39%;
+  }
+  #accident .sec9 .hyou .block dl dt {
+    background-color: #eacdd8;
+  }
+  #accident .sec9 .hyou .block dl dd {
+    background-color: #fff;
+  }
+  #accident .sec9 .hyou .block dl dd .box {
+    background-color: #af4b6e;
+    color: #fff;
+    padding: 2px 4px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  #accident .sec9 .hyou .block dl dd .box:first-child {
+    margin-left: 0;
+  }
+  #accident .sec9 .hyou .block dl dd .price {
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #accident .sec9 .hyou .block dl dt, #accident .sec9 .hyou .block dl dd {
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    font-size: 13px;
+    padding: 5.5px 15px;
+  }
+  #accident .sec9 .hyou .block .mb15 {
+    margin-bottom: 15px;
+  }
+  #accident .sec9 .hyou .kome {
+    font-size: 14px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    padding-left: 16px;
+    text-indent: -16px;
+  }
+  #accident .sec9 .fwb {
+    font-size: 14px;
+  }
+  #accident .sec9 .tyuui {
+    font-size: 14px;
+  }
+  #accident .sec9 .tyuui span {
+    display: block;
+    width: 235px;
+    margin-bottom: 20px;
+  }
+  #accident .sec6 .sec6_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #accident .sec6 ul {
+    flex-wrap: wrap;
+  }
+  #accident .sec6 ul li {
+    width: 100%;
+    margin-bottom: 6.5%;
+  }
+  #accident .sec6 ul li figure {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #accident .sec6 ul li figure img {
+    width: 42.7%;
+    margin-bottom: 0;
+  }
+  #accident .sec6 ul li figure figcaption {
+    width: 50.2%;
+    font-size: 14px;
+  }
+  #accident .sec6 ul li figure figcaption .red_txt {
+    font-size: 14px;
+  }
+  #accident .sec6 ul li figure figcaption .fz16 {
+    font-size: 12px;
+  }
+  #accident .sec6 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #accident .sec6 ul .yazi::after {
+    left: 20%;
+    /* bottom: -23%; */
+    transform: rotate(90deg);
+    right: inherit;
+    top: inherit;
+    width: 13px;
+    height: 26px;
+  }
+  #accident .sec7 .sec7_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #accident .sec7 .contact_link {
+    margin-bottom: 25px;
+  }
+  #accident .sec7 .contact_link .wh {
+    padding: 20px 15px;
+  }
+  #accident .sec7 .contact_link .ttl {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #accident .sec7 .contact_link .df {
+    flex-wrap: wrap;
+  }
+  #accident .sec7 .contact_link .df .con {
+    width: 100%;
+  }
+  #accident .sec7 .contact_link .df .con:first-child {
+    margin-bottom: 25px;
+  }
+  #accident .sec7 .contact_link p {
+    font-size: 13px;
+  }
+  #accident .sec7 .kome {
+    font-size: 13px;
+  }
+  #accident .sec8 .qa li {
+    padding: 15px;
+  }
+  #accident .sec8 .qa li .q_area {
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  #accident .sec8 .qa li .q_area .q_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #accident .sec8 .qa li .q_area .q_txt {
+    font-size: 16px;
+  }
+  #accident .sec8 .qa li .a_area {
+    align-items: flex-start;
+  }
+  #accident .sec8 .qa li .a_area .a_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #accident .sec8 .qa li .a_area .a_txt {
+    font-size: 14px;
+    padding-top: 0;
+    line-height: 1.5;
+  }
+  #accident .regulations {
+    padding: 0 15px;
+    margin: 50px 0;
+  }
+  #accident .regulations h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #accident .regulations h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #accident .regulations ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  #accident .regulations ul li a {
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 50px;
+    padding: 21px 60px 21px 30px;
+  }
+  #accident .privacy {
+    padding: 0 15px;
+    margin: 0 auto 100px;
+  }
+  #accident .privacy h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #accident .privacy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /*========= END 物損付家電延長保証 ===========*/
+  /*========= 住宅設備機器延長保証 ===========*/
+  #housing .kv {
+    height: 250px;
+    margin-bottom: 0;
+  }
+  #housing .kv .kv_text {
+    width: 315px;
+    height: 315px;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  #housing .kv .kv_text .green_area {
+    padding: 30px;
+  }
+  #housing .kv .kv_text .green_area img {
+    margin-bottom: 25px;
+    width: 76px;
+  }
+  #housing .kv .kv_text .green_area p {
+    font-size: 31.5px;
+  }
+  #housing .kv .kv_text .op_area {
+    padding: 15px;
+  }
+  #housing .kv .kv_text .op_area p:first-child {
+    font-size: 15px;
+  }
+  #housing .kv .kv_text .op_area p:last-child {
+    font-size: 16px;
+    width: 102.5px;
+    padding: 6px 0;
+  }
+  #housing .gray_bg {
+    padding: 50px 15px;
+    margin-bottom: 25px;
+  }
+  #housing .gray_bg .w1000 h2 {
+    font-size: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+  }
+  #housing .gray_bg .w1000 h2 span {
+    right: 45.3%;
+  }
+  #housing .sec1 {
+    padding-top: 275px;
+  }
+  #housing .sec1 ul {
+    margin-bottom: 15px;
+  }
+  #housing .sec1 ul li {
+    width: 32%;
+  }
+  #housing .sec1 .sec1_konnano {
+    font-size: 17.5px;
+    margin-bottom: 30px;
+  }
+  #housing .sec1 .sec1_konnano span {
+    font-size: 23px;
+  }
+  #housing .sec1 .manufacturer {
+    margin-bottom: 30px;
+  }
+  #housing .sec1 .kome {
+    font-size: 14px;
+  }
+  #housing .sec1 .kome .fz20 {
+    font-size: 14px;
+  }
+  #housing .sec2 h2 {
+    letter-spacing: -0.5px;
+  }
+  #housing .sec2 .change {
+    margin-bottom: 30px;
+  }
+  #housing .sec2 ul li {
+    margin-bottom: 20px;
+  }
+  #housing .sec2 ul li .green_ttl {
+    font-size: 15px;
+  }
+  #housing .sec2 ul li .txt {
+    font-size: 14px;
+  }
+  #housing .sec2 ul li:last-child {
+    margin-bottom: 30px;
+  }
+  #housing .sec2 .toha {
+    font-size: 15px;
+  }
+  #housing .sec2 .kome {
+    font-size: 14px;
+  }
+  #housing .sec3 .txt_box h3 {
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  #housing .sec3 .txt_box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #housing .sec3 .txt_box ul {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  #housing .sec3 .change {
+    margin-bottom: 10px;
+  }
+  #housing .sec3 .keisan {
+    margin-bottom: 10px;
+  }
+  #housing .sec4 .hosyou_txt li {
+    font-size: 14px;
+  }
+  #housing .sec4 .pdf_list {
+    padding: 0;
+    margin: 20px auto 30px;
+  }
+  #housing .sec4 .pdf_list li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #housing .sec4 .bg_wh {
+    padding: 25px 15px;
+  }
+  #housing .sec4 .bg_wh h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #housing .sec4 .bg_wh p, #housing .sec4 .bg_wh .hosyougai_txt {
+    font-size: 14px;
+  }
+  #housing .sec4 .bg_wh .icon_list {
+    margin-top: 25px;
+  }
+  #housing .sec4 .bg_wh .icon_list li {
+    width: 30.5%;
+  }
+  #housing .sec5 .fwb {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #housing .sec5 .tyuui {
+    font-size: 14px;
+  }
+  #housing .sec5 .tyuui span {
+    display: block;
+    width: 235px;
+    margin-bottom: 20px;
+  }
+  #housing .sec5 .accordionbox {
+    margin-bottom: 50px;
+  }
+  #housing .sec5 .accordionbox .acd_ttl {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #469687;
+  }
+  #housing .sec5 .accordionbox .accordionlist {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix {
+    position: relative;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .title {
+    background-color: #c8dfdb;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .title p {
+    color: #000;
+    font-size: 16px;
+    padding: 17.5px;
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 1;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    float: right;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    position: absolute;
+    left: 6px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon.active span:nth-of-type(1) {
+    display: none;
+  }
+  #housing .sec5 .accordionbox .accordionlist .clearfix .accordion_icon.active span:nth-of-type(2) {
+    top: 5px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  #housing .sec5 .accordionbox .accordionlist dd {
+    padding: 20px 15px;
+    display: none;
+    background-color: #fff;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr {
+    border-bottom: 1.5px solid #469687;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr th, #housing .sec5 .accordionbox .accordionlist dd table tr td {
+    padding: 9px 10px;
+    font-size: 13px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr th span, #housing .sec5 .accordionbox .accordionlist dd table tr td span {
+    font-size: 10px;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr th {
+    border-right: 1px solid #469687;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr th:last-child {
+    border-right: none;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr td {
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr td:first-child {
+    width: 62%;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr td:nth-of-type(2n) {
+    width: 19%;
+    border-left: 1.5px solid #469687;
+    border-right: 1px solid #469687;
+    text-align: right;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table tr td:nth-of-type(n+2) {
+    width: 19%;
+    text-align: right;
+  }
+  #housing .sec5 .accordionbox .accordionlist dd table .bg_gr {
+    background-color: #c8dfdb;
+    border-top: 1.5px solid #469687;
+  }
+  #housing .sec5 .accordionbox .kome p {
+    font-size: 14px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    padding-left: 36px;
+    text-indent: -36px;
+  }
+  #housing .sec6 .sec6_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #housing .sec6 ul {
+    flex-wrap: wrap;
+  }
+  #housing .sec6 ul li {
+    width: 100%;
+    margin-bottom: 6.5%;
+  }
+  #housing .sec6 ul li figure {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #housing .sec6 ul li figure img {
+    width: 42.7%;
+    margin-bottom: 0;
+  }
+  #housing .sec6 ul li figure figcaption {
+    width: 50.2%;
+    font-size: 14px;
+  }
+  #housing .sec6 ul li figure figcaption .fz16 {
+    font-size: 12px;
+  }
+  #housing .sec6 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #housing .sec6 ul .yazi::after {
+    left: 20%;
+    /* bottom: -23%; */
+    transform: rotate(90deg);
+    right: inherit;
+    top: inherit;
+    width: 13px;
+    height: 26px;
+  }
+  #housing .sec7 .sec7_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #housing .sec7 .contact_link {
+    margin-bottom: 25px;
+  }
+  #housing .sec7 .contact_link p {
+    font-size: 13px;
+  }
+  #housing .sec7 .contact_link {
+    margin-bottom: 25px;
+  }
+  #housing .sec7 .contact_link .wh {
+    padding: 20px 15px;
+  }
+  #housing .sec7 .contact_link .ttl {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #housing .sec7 .contact_link .df {
+    flex-wrap: wrap;
+  }
+  #housing .sec7 .contact_link .df .con {
+    width: 100%;
+  }
+  #housing .sec7 .contact_link .df .con:first-child {
+    margin-bottom: 25px;
+  }
+  #housing .sec7 .contact_link p {
+    font-size: 13px;
+  }
+  #housing .sec7 .kome {
+    font-size: 13px;
+  }
+  #housing .sec8 .qa li {
+    padding: 15px;
+  }
+  #housing .sec8 .qa li .q_area {
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  #housing .sec8 .qa li .q_area .q_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #housing .sec8 .qa li .q_area .q_txt {
+    font-size: 16px;
+  }
+  #housing .sec8 .qa li .a_area {
+    align-items: flex-start;
+  }
+  #housing .sec8 .qa li .a_area .a_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #housing .sec8 .qa li .a_area .a_txt {
+    font-size: 14px;
+    padding-top: 0;
+    line-height: 1.5;
+  }
+  #housing .regulations {
+    padding: 0 15px;
+    margin: 50px 0;
+  }
+  #housing .regulations h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #housing .regulations h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #housing .regulations ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  #housing .regulations ul li a {
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 50px;
+    padding: 21px 60px 21px 30px;
+  }
+  #housing .privacy {
+    padding: 0 15px;
+    margin: 0 auto 100px;
+  }
+  #housing .privacy h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #housing .privacy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /*========= END 住宅設備機器延長保証 ===========*/
+  #watch .kv {
+    height: 250px;
+    margin-bottom: 0;
+  }
+  #watch .kv .kv_text {
+    width: 315px;
+    height: 315px;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  #watch .kv .kv_text .blue_area {
+    padding: 15px 20px 25px;
+  }
+  #watch .kv .kv_text .blue_area img {
+    margin-bottom: 15px;
+    width: 160px;
+  }
+  #watch .kv .kv_text .blue_area p {
+    font-size: 31.5px;
+  }
+  #watch .kv .kv_text .op_area {
+    padding: 15px;
+  }
+  #watch .kv .kv_text .op_area p:first-child {
+    font-size: 15px;
+    width: 100%;
+  }
+  #watch .kv .kv_text .op_area p:last-child {
+    font-size: 16px;
+    width: 102.5px;
+    width: 100%;
+    margin-top: 15px;
+  }
+  #watch .kv .kv_text .op_area .thin .thin_thin:first-child {
+    font-size: 16px;
+    padding: 17px 10px;
+  }
+  #watch .kv .kv_text .op_area .thin .thin_thin:last-child {
+    font-size: 17px;
+    padding: 8px 0;
+  }
+  #watch .kv .kv_text .op_area .thin .thin_thin:last-child span {
+    font-size: 15px;
+  }
+  #watch .gray_bg {
+    padding: 50px 15px;
+    margin-bottom: 25px;
+  }
+  #watch .gray_bg .w1000 h2 {
+    font-size: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+  }
+  #watch .gray_bg .w1000 h2 span {
+    right: 45.3%;
+  }
+  #watch .sec1 {
+    padding-top: 275px;
+  }
+  #watch .sec1 ul {
+    margin-bottom: 15px;
+  }
+  #watch .sec1 ul li {
+    width: 32%;
+  }
+  #watch .sec1 .sec1_konnano {
+    font-size: 17.5px;
+    margin-bottom: 30px;
+  }
+  #watch .sec1 .sec1_konnano span {
+    font-size: 23px;
+  }
+  #watch .sec1 .manufacturer {
+    margin-bottom: 30px;
+  }
+  #watch .sec1 .kome {
+    font-size: 14px;
+  }
+  #watch .sec1 .kome .fz20 {
+    font-size: 14px;
+  }
+  #watch .sec1 .trai h3 {
+    font-size: 16px;
+  }
+  #watch .sec1 .trai .wh_gb {
+    padding: 25px 15px;
+  }
+  #watch .sec1 .trai .wh_gb .manuf_txt {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  #watch .sec1 .trai .wh_gb .kome {
+    font-size: 14px;
+  }
+  #watch .sec1 .trai .wh_gb .kome dl {
+    flex-wrap: wrap;
+  }
+  #watch .sec1 .trai .wh_gb .kome dl:first-child {
+    margin-bottom: 15px;
+  }
+  #watch .sec1 .trai .wh_gb .kome dl dt, #watch .sec1 .trai .wh_gb .kome dl dd {
+    width: 100%;
+  }
+  #watch .sec1 .trai .wh_gb .kome dl dd {
+    font-size: 14px;
+  }
+  #watch .sec1 .trai .wh_gb .kome dl dt {
+    padding-left: 0;
+    font-size: 18px;
+  }
+  #watch .sec2 h2 {
+    letter-spacing: -0.5px;
+  }
+  #watch .sec2 .change {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  #watch .sec2 .change div {
+    width: 100%;
+  }
+  #watch .sec2 .change div:first-child {
+    margin-bottom: 30px;
+  }
+  #watch .sec2 ul li {
+    margin-bottom: 20px;
+  }
+  #watch .sec2 ul li .blue_ttl {
+    font-size: 15px;
+  }
+  #watch .sec2 ul li .txt {
+    font-size: 14px;
+  }
+  #watch .sec2 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #watch .sec2 .toha {
+    font-size: 15px;
+  }
+  #watch .sec2 .kome {
+    font-size: 14px;
+  }
+  #watch .sec3 .txt_box h3 {
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  #watch .sec3 .txt_box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #watch .sec3 .txt_box ul {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  #watch .sec3 .change {
+    margin-bottom: 10px;
+  }
+  #watch .sec3 .keisan {
+    margin-bottom: 10px;
+  }
+  #watch .sec3 .dddd {
+    margin-bottom: 20px;
+  }
+  #watch .sec3 .dddd dl dt {
+    font-size: 16px;
+    width: 80px;
+  }
+  #watch .sec3 .dddd dl dt:first-child {
+    border: 2px solid #3c5582;
+  }
+  #watch .sec3 .dddd dl dd {
+    font-size: 14px;
+  }
+  #watch .sec3 .dddd dl:last-child dt {
+    padding: 0;
+  }
+  #watch .sec4 .g_up {
+    margin-bottom: 40px;
+  }
+  #watch .sec4 .g_up h3 {
+    font-size: 18px;
+  }
+  #watch .sec4 .g_up dl {
+    margin-bottom: 15px;
+  }
+  #watch .sec4 .g_up dl dt {
+    font-size: 16px;
+  }
+  #watch .sec4 .g_up dl dd {
+    font-size: 14px;
+  }
+  #watch .sec4 .sizen h3 {
+    background-color: #fff;
+    border: 2px solid #3c5582;
+    padding: 2px 0;
+  }
+  #watch .sec4 .ziko h3 {
+    background-color: #3c5582;
+    color: #fff;
+    padding: 4px 0;
+  }
+  #watch .sec4 img {
+    display: block;
+    width: 100%;
+  }
+  #watch .sec5 .hosyou_txt li {
+    font-size: 14px;
+  }
+  #watch .sec5 .pdf_list {
+    margin: 20px auto 30px;
+    padding: 0;
+  }
+  #watch .sec5 .pdf_list li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #watch .sec5 .pdf_list li a {
+    font-size: 14px;
+  }
+  #watch .sec5 .trai {
+    margin-bottom: 30px;
+  }
+  #watch .sec5 .trai h3 {
+    font-size: 18px;
+    letter-spacing: -1px;
+    padding: 9px 15px;
+  }
+  #watch .sec5 .trai .wh_gb {
+    padding: 15px;
+    margin-bottom: 0;
+  }
+  #watch .sec5 .trai .wh_gb .plus {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  #watch .sec5 .trai .wh_gb .plus span {
+    font-size: 18px;
+    min-width: inherit;
+    width: 43%;
+  }
+  #watch .sec5 .trai .wh_gb .plus span:first-child {
+    margin-right: 10px;
+  }
+  #watch .sec5 .trai .wh_gb .plus span:last-child {
+    margin-left: 10px;
+  }
+  #watch .sec5 .trai .wh_gb .plus_txt {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  #watch .sec5 .trai .wh_gb .wac_plus {
+    font-size: 14px;
+  }
+  #watch .sec5 .trai .wh_gb .manufacturer {
+    margin-bottom: 15px;
+  }
+  #watch .sec5 .trai .wh_gb .kome dl {
+    margin-bottom: 15px;
+  }
+  #watch .sec5 .trai .wh_gb .kome dl dt {
+    font-size: 18px;
+  }
+  #watch .sec5 .trai .wh_gb .kome dl dd {
+    font-size: 14px;
+  }
+  #watch .sec5 .trai .wh_gb .kome dl dd a img {
+    font-size: 14px;
+  }
+  #watch .sec5 .trai .wh_gb .kome dl:last-child {
+    margin-bottom: 0;
+  }
+  #watch .sec5 .bg_wh {
+    padding: 25px 15px;
+  }
+  #watch .sec5 .bg_wh.mb60 {
+    margin-bottom: 30px;
+  }
+  #watch .sec5 .bg_wh .ttl {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #watch .sec5 .bg_wh ul {
+    margin-bottom: 0;
+  }
+  #watch .sec5 .bg_wh ul li {
+    width: 30%;
+  }
+  #watch .sec5 .bg_wh .txt {
+    font-size: 14px;
+  }
+  #watch .sec5 .bg_wh ol li {
+    font-size: 14px;
+  }
+  #watch .sec9 .hyou {
+    margin-bottom: 55px;
+  }
+  #watch .sec9 .hyou:last-child {
+    margin-bottom: 50px;
+  }
+  #watch .sec9 .hyou .ttl {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    background-color: #3c5582;
+    padding: 4px 0;
+    margin-bottom: 15px;
+  }
+  #watch .sec9 .hyou .block {
+    margin-bottom: 30px;
+  }
+  #watch .sec9 .hyou .block:last-child {
+    margin-bottom: 0;
+  }
+  #watch .sec9 .hyou .block .plan_name {
+    font-size: 14.5px;
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    margin-bottom: 10px;
+  }
+  #watch .sec9 .hyou .block .df {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #3c5582;
+  }
+  #watch .sec9 .hyou .block .df .w61p {
+    width: 61%;
+    border-right: 2px solid #3c5582;
+  }
+  #watch .sec9 .hyou .block .df .w39p {
+    width: 39%;
+  }
+  #watch .sec9 .hyou .block dl dt {
+    background-color: #c4ccda;
+  }
+  #watch .sec9 .hyou .block dl dd {
+    background-color: #fff;
+  }
+  #watch .sec9 .hyou .block dl dd .box {
+    background-color: #3c5582;
+    color: #fff;
+    padding: 2px 4px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  #watch .sec9 .hyou .block dl dd .box:first-child {
+    margin-left: 0;
+  }
+  #watch .sec9 .hyou .block dl dd .price {
+    font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  }
+  #watch .sec9 .hyou .block dl dt, #watch .sec9 .hyou .block dl dd {
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    font-size: 13px;
+    padding: 5.5px 15px;
+  }
+  #watch .sec9 .hyou .block .mb15 {
+    margin-bottom: 15px;
+  }
+  #watch .sec9 .hyou .kome {
+    font-size: 14px;
+    font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+    padding-left: 16px;
+    text-indent: -16px;
+  }
+  #watch .sec9 .fwb {
+    font-size: 14px;
+  }
+  #watch .sec9 .tyuui {
+    font-size: 14px;
+  }
+  #watch .sec9 .tyuui span {
+    display: block;
+    width: 235px;
+    margin-bottom: 20px;
+  }
+  #watch .sec6 .sec6_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #watch .sec6 ul {
+    flex-wrap: wrap;
+  }
+  #watch .sec6 ul li {
+    width: 100%;
+    margin-bottom: 6.5%;
+  }
+  #watch .sec6 ul li figure {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #watch .sec6 ul li figure img {
+    width: 42.7%;
+    margin-bottom: 0;
+  }
+  #watch .sec6 ul li figure figcaption {
+    width: 50.2%;
+    font-size: 14px;
+  }
+  #watch .sec6 ul li figure figcaption .fz16 {
+    font-size: 12px;
+  }
+  #watch .sec6 ul li:last-child {
+    margin-bottom: 0;
+  }
+  #watch .sec6 ul .yazi::after {
+    left: 20%;
+    /* bottom: -23%; */
+    transform: rotate(90deg);
+    right: inherit;
+    top: inherit;
+    width: 13px;
+    height: 26px;
+  }
+  #watch .sec7 .sec7_txt {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  #watch .sec7 .contact_link {
+    margin-bottom: 25px;
+  }
+  #watch .sec7 .contact_link .wh {
+    padding: 20px 15px;
+  }
+  #watch .sec7 .contact_link .ttl {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #watch .sec7 .contact_link .df {
+    flex-wrap: wrap;
+  }
+  #watch .sec7 .contact_link .df .con {
+    width: 100%;
+  }
+  #watch .sec7 .contact_link .df .con:first-child {
+    margin-bottom: 25px;
+  }
+  #watch .sec7 .contact_link p {
+    font-size: 13px;
+  }
+  #watch .sec7 .kome {
+    font-size: 13px;
+  }
+  #watch .sec8 .qa li {
+    padding: 15px;
+  }
+  #watch .sec8 .qa li .q_area {
+    align-items: flex-start;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  #watch .sec8 .qa li .q_area .q_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #watch .sec8 .qa li .q_area .q_txt {
+    font-size: 16px;
+  }
+  #watch .sec8 .qa li .a_area {
+    align-items: flex-start;
+  }
+  #watch .sec8 .qa li .a_area .a_icon {
+    font-size: 15px;
+    height: 30px;
+    min-width: 30px;
+    margin-top: 5px;
+  }
+  #watch .sec8 .qa li .a_area .a_txt {
+    font-size: 14px;
+    padding-top: 0;
+    line-height: 1.5;
+  }
+  #watch .regulations {
+    padding: 0 15px;
+    margin: 50px 0;
+  }
+  #watch .regulations h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #watch .regulations h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  #watch .regulations ul li {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  #watch .regulations ul li a {
+    font-size: 14px;
+    line-height: 1.3;
+    border-radius: 50px;
+    padding: 21px 60px 21px 30px;
+  }
+  #watch .privacy {
+    padding: 0 15px;
+    margin: 0 auto 100px;
+  }
+  #watch .privacy h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  #watch .privacy p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media all and (max-width: 350px) {
+  #top .kv_text h2 {
+    font-size: 22px;
+  }
+  #top .kv_text h2 span {
+    font-size: 23px;
+  }
+  #top .service .w1200 .service_box .box_text h3 {
+    letter-spacing: -2px;
+  }
+  #top .service .w1200 .service04 .box_text p {
+    letter-spacing: -1px;
+  }
+  #top .regulations ul li {
+    height: 75px;
+  }
+  #top .regulations ul li a {
+    font-size: 11px;
+  }
+}
+/*========== ウォッチ延長保証 ==========*/
+#test .kv {
+  position: relative;
+  background-image: url("../img/watch/kv.png");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  margin-bottom: 30px;
+}
+#test .kv .kv_img {
+  display: block;
+  width: 100%;
+}
+#test .kv .kv_text {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 15px 25px -8px rgba(0, 0, 0, 0.24);
+}
+#test .kv .kv_text .blue_area {
+  background-color: #3c5582;
+  padding: 15px 30px 33px;
+}
+#test .kv .kv_text .blue_area img {
+  width: 207px;
+  display: block;
+  margin: 0 auto 20px;
+}
+#test .kv .kv_text .blue_area p {
+  text-align: center;
+  font-size: 40px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  color: #fff;
+  line-height: 1.2;
+}
+#test .kv .kv_text .op_area {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+#test .kv .kv_text .op_area p {
+  /*&:last-child{
+    background-color: $green;
+	color: #fff;
+	font-size: 22px;
+	font-family: $SansMedium;
+	padding: 9px 20px;
+	text-align: center;
+	display: block;
+	margin: 9px auto 0;
+	line-height: 1;
+	width: 130px;
+  }*/
+}
+#test .kv .kv_text .op_area p:first-child {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-align: center;
+}
+#test .kv .kv_text .op_area .thin {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+  margin: 20px auto 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#test .kv .kv_text .op_area .thin .thin_thin {
+  background-color: #3c5582;
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 10px;
+}
+#test .kv .kv_text .op_area .thin .thin_thin:first-child {
+  padding: 19px 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #fff;
+}
+#test .kv .kv_text .op_area .thin .thin_thin:last-child {
+  padding: 7px;
+  margin-left: 10px;
+  color: #fff;
+  text-align: center;
+}
+#test .kv .kv_text .op_area .thin .thin_thin:last-child span {
+  font-size: 18px;
+}
+#test .gray_bg {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+  margin-bottom: 30px;
+}
+#test .gray_bg:last-child {
+  margin-bottom: 60px;
+}
+#test .gray_bg .w1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#test .gray_bg .w1000 h2 {
+  font-size: 38px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 60px;
+  padding-bottom: 45px;
+  font-weight: normal !important;
+}
+#test .gray_bg .w1000 h2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 560px;
+  background-image: url("../img/common/griy_h2_img.png");
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-size: contain;
+}
+#test .gray_bg .w1000 h2 span {
+  display: none;
+}
+#test .sec1 ul {
+  max-width: 675px;
+  margin: 0 auto 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#test .sec1 ul li {
+  list-style: none;
+  width: 31%;
+}
+#test .sec1 ul li img {
+  display: block;
+  width: 100%;
+}
+#test .sec1 .sec1_konnano {
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+#test .sec1 .sec1_konnano span {
+  font-size: 36px;
+  color: #3c5582;
+}
+#test .sec1 .trai h3 {
+  text-align: center;
+  background-color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#test .sec1 .trai h3::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 0 25px;
+  border-color: #3c5582 transparent transparent transparent;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#test .sec1 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+}
+#test .sec1 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px;
+  max-width: 550px;
+}
+#test .sec1 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#test .sec1 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#test .sec1 .trai .wh_gb .kome dl {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+#test .sec1 .trai .wh_gb .kome dl dt {
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 18.7%;
+  padding-left: 15px;
+}
+#test .sec1 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  width: 81.3%;
+}
+#test .sec1 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#test .sec1 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #3c5582;
+}
+#test .sec1 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#test .sec1 .trai .wh_gb .kome dl:first-child {
+  border: 3px solid #3c5582;
+  margin-bottom: 20px;
+}
+#test .sec1 .trai .wh_gb .kome dl:first-child dt {
+  color: #3c5582;
+}
+#test .sec1 .trai .wh_gb .kome dl:first-child dd a {
+  color: #3c5582;
+}
+#test .sec1 .trai .wh_gb .kome dl:last-child {
+  background-color: #3c5582;
+}
+#test .sec1 .trai .wh_gb .kome dl:last-child dt, #test .sec1 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#test .sec1 .trai .wh_gb .kome dl:last-child dt a, #test .sec1 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#test .sec1 .trai .wh_gb .kome dl:last-child dt a span, #test .sec1 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#test .sec2 .change {
+  margin: 0 auto 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#test .sec2 .change div {
+  width: 48%;
+}
+#test .sec2 .change div img {
+  display: block;
+  width: 100%;
+}
+#test .sec2 ul li {
+  margin-bottom: 30px;
+  list-style: none;
+}
+#test .sec2 ul li .blue_ttl {
+  font-size: 18px;
+  color: #3c5582;
+  margin-bottom: 2px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec2 ul li .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#test .sec2 ul li .txt::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 12px;
+  left: 6px;
+}
+#test .sec2 ul li .txt_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+}
+#test .sec3 .dddd {
+  margin-bottom: 40px;
+}
+#test .sec3 .dddd dl dt {
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 130px;
+  text-align: center;
+}
+#test .sec3 .dddd dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec3 .dddd dl:first-child {
+  margin-bottom: 20px;
+}
+#test .sec3 .dddd dl:first-child dt {
+  background-color: #fff;
+  border: 3px solid #3c5582;
+  color: #3c5582;
+}
+#test .sec3 .dddd dl:last-child dt {
+  color: #fff;
+  background-color: #3c5582;
+  padding: 3px 0;
+}
+#test .sec3 img {
+  display: block;
+  width: 100%;
+}
+#test .sec4 .g_up {
+  margin-bottom: 60px;
+}
+#test .sec4 .g_up h3 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+}
+#test .sec4 .g_up dl {
+  margin-bottom: 20px;
+}
+#test .sec4 .g_up dl dt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#test .sec4 .g_up dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  padding-left: 16px;
+}
+#test .sec4 .sizen h3 {
+  background-color: #fff;
+  border: 3px solid #3c5582;
+  padding: 4px 0;
+  color: #3c5582;
+}
+#test .sec4 .ziko h3 {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 7px 0;
+}
+#test .sec4 img {
+  display: block;
+  width: 100%;
+}
+#test .sec5 .hosyou_txt li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-indent: 0px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 2;
+}
+#test .sec5 .hosyou_txt li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 6px;
+}
+#test .sec5 .pdf_list {
+  max-width: 620px;
+  padding: 0 10px;
+  margin: 40px auto 65px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#test .sec5 .pdf_list li {
+  list-style: none;
+  width: 46.7%;
+}
+#test .sec5 .pdf_list li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 14px 35px 14px 0;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 50px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+#test .sec5 .pdf_list li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 52%;
+  right: 65px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#test .sec5 .pdf_list li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#test .sec5 .pdf_list li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#test .sec5 .pdf_list li:last-child a::after {
+  right: 45px;
+}
+#test .sec5 .trai {
+  border: 4px solid #3c5582;
+  margin-bottom: 60px;
+}
+#test .sec5 .trai h3 {
+  text-align: center;
+  background-color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #fff;
+  padding: 15px;
+  font-size: 28px;
+  position: relative;
+}
+#test .sec5 .trai .wh_gb {
+  background-color: #fff;
+  padding: 35px 30px 30px;
+  margin-bottom: 60px;
+}
+#test .sec5 .trai .wh_gb .plus {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#test .sec5 .trai .wh_gb .plus span {
+  font-size: 24px;
+  text-align: center;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  display: inline-block;
+  width: 30%;
+  min-width: 140px;
+}
+#test .sec5 .trai .wh_gb .plus span:first-child {
+  border: 3px solid #3c5582;
+  color: #3c5582;
+  padding: 4px 0;
+  margin-right: 15px;
+}
+#test .sec5 .trai .wh_gb .plus span:last-child {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 7px 0;
+  margin-left: 15px;
+}
+#test .sec5 .trai .wh_gb .plus_txt {
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#test .sec5 .trai .wh_gb .wac_plus {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+}
+#test .sec5 .trai .wh_gb .manufacturer {
+  display: block;
+  width: 100%;
+  margin: 0 auto 50px;
+  max-width: 550px;
+}
+#test .sec5 .trai .wh_gb .manuf_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Medium", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 35px;
+}
+#test .sec5 .trai .wh_gb .manuf_txt span {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+}
+#test .sec5 .trai .wh_gb .kome dl {
+  padding: 20px;
+}
+#test .sec5 .trai .wh_gb .kome dl dt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#test .sec5 .trai .wh_gb .kome dl dd {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec5 .trai .wh_gb .kome dl dd a {
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+}
+#test .sec5 .trai .wh_gb .kome dl dd a span {
+  border-bottom: 1px solid #3c5582;
+}
+#test .sec5 .trai .wh_gb .kome dl dd a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#test .sec5 .trai .wh_gb .kome dl:first-child {
+  background-color: #c4ccda;
+  margin-bottom: 20px;
+}
+#test .sec5 .trai .wh_gb .kome dl:first-child dt {
+  color: #3c5582;
+}
+#test .sec5 .trai .wh_gb .kome dl:first-child dd a {
+  color: #3c5582;
+}
+#test .sec5 .trai .wh_gb .kome dl:last-child {
+  background-color: #3c5582;
+}
+#test .sec5 .trai .wh_gb .kome dl:last-child dt, #test .sec5 .trai .wh_gb .kome dl:last-child dd {
+  color: #fff;
+}
+#test .sec5 .trai .wh_gb .kome dl:last-child dt a, #test .sec5 .trai .wh_gb .kome dl:last-child dd a {
+  color: #fff;
+}
+#test .sec5 .trai .wh_gb .kome dl:last-child dt a span, #test .sec5 .trai .wh_gb .kome dl:last-child dd a span {
+  border-bottom: 1px solid #fff;
+}
+#test .sec5 .bg_wh {
+  background-color: #fff;
+  padding: 30px;
+}
+#test .sec5 .bg_wh .ttl {
+  font-size: 24px;
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#test .sec5 .bg_wh ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#test .sec5 .bg_wh ul li {
+  width: 14.4%;
+  list-style: none;
+  margin-bottom: 15px;
+}
+#test .sec5 .bg_wh ul li img {
+  display: block;
+  width: 100%;
+}
+#test .sec5 .bg_wh .txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec5 .bg_wh ol {
+  list-style: none;
+}
+#test .sec5 .bg_wh ol li {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  list-style: none;
+}
+#test .sec5 .bg_wh.mb60 {
+  margin-bottom: 60px;
+}
+#test .sec9 .tb {
+  margin-bottom: 60px;
+}
+#test .sec9 .tb .ttl {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 20px;
+  background-color: #3c5582;
+  padding: 7px;
+}
+#test .sec9 .tb table {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+#test .sec9 .tb table tr:first-child {
+  background-color: #c4ccda;
+}
+#test .sec9 .tb table tr:last-child {
+  border-top: 3px solid #3c5582;
+}
+#test .sec9 .tb table tr td, #test .sec9 .tb table tr th {
+  padding: 13px 10px;
+  border-right: 1px solid #3c5582;
+  font-size: 18px;
+}
+#test .sec9 .tb table tr td:first-child, #test .sec9 .tb table tr th:first-child {
+  width: 21%;
+  text-align: center;
+}
+#test .sec9 .tb table tr td:nth-of-type(2n), #test .sec9 .tb table tr th:nth-of-type(2n) {
+  width: 15% !important;
+  text-align: center;
+}
+#test .sec9 .tb table tr td:nth-of-type(n+2), #test .sec9 .tb table tr th:nth-of-type(n+2) {
+  width: 10%;
+  text-align: center;
+}
+#test .sec9 .tb table tr td:last-child, #test .sec9 .tb table tr th:last-child {
+  width: 54% !important;
+  text-align: left;
+  border-right: none;
+}
+#test .sec9 .tb table tr th {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec9 .tb table tr th:last-child {
+  text-align: center;
+}
+#test .sec9 .tb table tr td {
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec9 .tb table tr td .box {
+  background-color: #3c5582;
+  color: #fff;
+  padding: 8px 10px;
+  display: inline-block;
+  margin: 0 10px;
+}
+#test .sec9 .tb table tr td .box:first-child {
+  margin-left: 0;
+}
+#test .sec9 .tb table tr td .price {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec9 .tb table tr td:first-child {
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  letter-spacing: -1px;
+}
+#test .sec9 .fwb {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-bottom: 10px;
+}
+#test .sec9 .tyuui {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec9 .tyuui span {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px 15px;
+  margin-right: 15px;
+}
+#test .sec6 .sec6_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#test .sec6 ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#test .sec6 ul li {
+  list-style: none;
+  width: 29.4%;
+  position: relative;
+}
+#test .sec6 ul li figure img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#test .sec6 ul li figure figcaption {
+  text-align: center;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1.8;
+}
+#test .sec6 ul li figure figcaption .blue_txt {
+  color: #3c5582;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec6 ul .yazi::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  right: -15%;
+  width: 26px;
+  height: 56px;
+  /*border-top: 2.165vw solid transparent;
+  border-left: 1.948vw solid $blue;
+  border-bottom: 2.165vw solid transparent;*/
+  background-image: url("../img/standard/yazi.png");
+  background-size: cover;
+}
+#test .sec7 .sec7_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+#test .sec7 .sec7_txt a {
+  color: #3c5582;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  	/*&::after{
+  	  content: "";
+  	  width: 16px;
+  	  height: 16px;
+  	  background-image: url("../img/housing/pdf_icon.png");
+  	  background-size: cover;
+  	  background-repeat: no-repeat;
+  	  position: absolute;
+  	  top: 60%;
+  	  right: 10px;
+  	  transform: translateY(-50%);
+  	  -webkit-transform: translateY(-50%);
+      }*/
+}
+#test .sec7 .sec7_txt a span {
+  border-bottom: 1px solid #3c5582;
+}
+#test .sec7 .sec7_txt a img {
+  width: 16px;
+  vertical-align: middle;
+}
+#test .sec7 .contact_link {
+  margin-bottom: 40px;
+}
+#test .sec7 .contact_link .wh {
+  background-color: #fff;
+  padding: 30px 55px;
+}
+#test .sec7 .contact_link .ttl {
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  color: #3c5582;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#test .sec7 .contact_link .df {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+}
+#test .sec7 .contact_link .df .con {
+  width: 47.2%;
+}
+#test .sec7 .contact_link .df .con a {
+  display: block;
+  width: 100%;
+}
+#test .sec7 .contact_link .df .con a img {
+  display: block;
+  width: 100%;
+}
+#test .sec7 .contact_link p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec7 .kome {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+#test .sec8 .qa li {
+  list-style: none;
+  background-color: #fff;
+  padding: 20px 30px 30px;
+  margin-bottom: 30px;
+}
+#test .sec8 .qa li:last-child {
+  margin-bottom: 0;
+}
+#test .sec8 .qa li .q_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #b4b4b4;
+}
+#test .sec8 .qa li .q_area .q_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #3c5582;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #fff;
+}
+#test .sec8 .qa li .q_area .q_txt {
+  font-size: 20px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .sec8 .qa li .a_area {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+}
+#test .sec8 .qa li .a_area .a_icon {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  min-width: 42px;
+  height: 42px;
+  background-color: #c4ccda;
+  font-size: 22px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  margin-right: 15px;
+  color: #3c5582;
+}
+#test .sec8 .qa li .a_area .a_txt {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+  padding-top: 5px;
+}
+#test .sec8 .qa li .a_area .a_txt a {
+  text-decoration: none;
+  color: #000;
+}
+#test .sec8 .qa li .a_area .a_txt a.mail {
+  border-bottom: 1px solid #000;
+}
+#test .regulations {
+  max-width: 730px;
+  margin: 60px auto;
+}
+#test .regulations h3 {
+  color: #3c5582;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+#test .regulations .old {
+  margin-bottom: 40px;
+}
+#test .regulations h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#test .regulations ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#test .regulations ul li a {
+  display: block;
+  width: 100%;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  text-decoration: none;
+  line-height: 1;
+  color: #000;
+  position: relative;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #000;
+}
+#test .regulations ul li a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/common/icon_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+#test .regulations ul li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#test .regulations ul li a:hover::after {
+  background-image: url("../img/common/icon_2.png");
+}
+#test .privacy {
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: 0 auto 60px;
+}
+#test .privacy h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "NotoSansCJKjp Bold", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#test .privacy p {
+  font-size: 16px;
+  font-family: "NotoSansCJKjp Regular", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  line-height: 2;
+}
+
+/*========== NED ウォッチ延長保証 ==========*/

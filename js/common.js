@@ -1,0 +1,1 @@
+$(function(){$(".accordionbox dt").on("click",function(){$(this).next().slideToggle();if($(this).children(".accordion_icon").hasClass("active")){$(this).children(".accordion_icon").removeClass("active")}else{$(this).children(".accordion_icon").addClass("active")}})});$(function(){$(".drawer").drawer()});
